@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zetetic Sift — MCQ-based active recall · Being Zetetic</title>
+  <meta name="description" content="Zetetic Sift is the MCQ mode of the Being Zetetic protocol. One-liner questions with 4 options, then one-liner explanations of why each is right or wrong." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <nav class="top">
+    <div class="wrap">
+      <a href="index.html" class="brand">Being <span class="z">Zetetic</span></a>
+      <ul>
+        <li><a href="thread.html" data-path="thread.html">Thread</a></li>
+        <li><a href="sift.html" data-path="sift.html">Sift</a></li>
+        <li><a href="hybrid.html" data-path="hybrid.html">Hybrid</a></li>
+        <li><a href="machine.html" class="cta" data-path="machine.html">For AI ▸</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-head">
+      <div class="wrap">
+        <div class="crumb"><a href="index.html">← Being Zetetic</a> &nbsp;/&nbsp; Mode 02</div>
+        <h1><span class="em">Zetetic</span> Sift.</h1>
+        <p class="sub">An MCQ-based stream. One-liner questions with 4 options, then one-liner explanations of why each is right or wrong. Every wrong answer is plausible to a hasty reader — that's what makes it work.</p>
+        <div class="meta">
+          <div>Best for · <span>active recall and exam prep</span></div>
+          <div>Format · <span>MCQ stream with explanations</span></div>
+          <div>Length · <span>scales to syllabus depth</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="wrap prose">
+        <h2>What it does</h2>
+        <p>Sift takes a syllabus and turns it into a stream of multiple-choice questions. Each question forces a choice; each choice forces a justification. The reader doesn't just recognize the right answer — they understand why the three wrong ones feel almost right, which is where real understanding lives.</p>
+        <p>To <em>sift</em> is to separate the fine from the coarse. The mode separates what you know from what you merely recognize.</p>
+
+        <h2>When to use it</h2>
+        <ul>
+          <li>You've learned a subject once (maybe via Thread) and need to lock it in.</li>
+          <li>You're preparing for an exam, interview, or certification.</li>
+          <li>You want to expose your own blind spots — the wrong answers you almost picked.</li>
+          <li>You're reviewing material you've seen before but don't fully own.</li>
+        </ul>
+
+        <h2>The structure</h2>
+        <p>Each question is 4 options. Exactly one is right. Each option gets a one-line explanation. Between every 4 questions, a checkpoint with 2 short-answer recall questions — answers deferred.</p>
+
+        <div class="example"><span class="acc">─── EXAMPLE · Q1 ───</span>
+
+🧩 CONTEXT
+We just learned a system is a pattern of interaction, not its parts.
+
+❓ Q1: A clock is on the table. You take it apart and lay the gears
+   on the table. The clock is now…?
+A) Destroyed — the parts no longer work
+B) ✅ A collection — the parts are intact, the pattern is gone
+C) Still a clock — the system exists independent of arrangement
+D) A different system — the gears now interact with the table
+
+✅ Why B is RIGHT: A collection has the parts without the pattern of
+   interaction; that's exactly what remains.
+❌ Why A is WRONG: "Destroyed" implies the parts are gone. They aren't.
+❌ Why C is WRONG: The system <em>is</em> the pattern. No pattern, no system.
+❌ Why D is WRONG: The gears on a table aren't interacting with the
+   table in any meaningful pattern.
+
+🔗 TETHER: This matters because in Phase 4 we'll see that some
+   systems can be "moved" — the same pattern in different parts.
+
+<span class="acc">─── EXAMPLE · Q2 ───</span>
+
+❓ Q2: Two cities have the same traffic system — same rules, same
+   signals, same patterns of flow. Is it one system or two?
+A) One — they're identical
+B) ✅ Two — they share a pattern but exist independently
+C) Neither — a system needs physical parts, not just rules
+D) One — a pattern is a system
+
+✅ Why B is RIGHT: They share the <em>pattern</em>, not the parts.
+   Each city is its own system with its own parts.
+❌ Why A is WRONG: Identity of pattern doesn't mean identity of system.
+❌ Why C is WRONG: "Rules" can function as the parts of an abstract system.
+❌ Why D is WRONG: A pattern can be instantiated in many systems
+   (or zero).
+
+📍 CHECKPOINT
+1. In one sentence, what makes a system a system?
+2. Why is a pile of gears not a clock?
+
+(answers at the bottom of Phase 3)</div>
+
+        <h2>The full prompt</h2>
+
+        <div class="prompt-box">
+          <div class="label">— Zetetic Sift prompt —</div>
+          <pre id="sift-prompt">Loading…</pre>
+          <button class="btn primary copy-btn" data-copy="sift">Copy <span class="arrow">▶</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="label">— Related —</div>
+          <h2>Other modes</h2>
+        </div>
+        <div class="modes">
+          <div class="mode">
+            <div class="num">— 01 —</div>
+            <h3>Zetetic Thread</h3>
+            <p>The pure thought-map. Build the mental model first, then test it with Sift.</p>
+            <div class="actions"><a href="thread.html" class="btn">View Thread →</a></div>
+          </div>
+          <div class="mode">
+            <div class="num">— 03 —</div>
+            <h3>Hybrid</h3>
+            <p>Thread and Sift in the same document, alternating. The complete protocol.</p>
+            <div class="actions"><a href="hybrid.html" class="btn">View Hybrid →</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="copy">© Being Zetetic — built for the eternally curious.</div>
+      <div class="links">
+        <a href="thread.html">Thread</a>
+        <a href="sift.html">Sift</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="machine.html">Machine</a>
+      </div>
+    </div>
+  </footer>
+<script src="assets/prompts.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    document.getElementById('sift-prompt').textContent = window.BZ_PROMPTS.sift;
+  </script>
+</body>
+</html>
