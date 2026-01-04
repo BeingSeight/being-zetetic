@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zetetic-Socratic Hybrid — Complete mastery · Being Zetetic</title>
+  <meta name="description" content="The Zetetic-Socratic Hybrid combines Thread (thought-map) and Sift (MCQ) modes in a single document. Build, test, build, test — for complete mastery." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <nav class="top">
+    <div class="wrap">
+      <a href="index.html" class="brand">Being <span class="z">Zetetic</span></a>
+      <ul>
+        <li><a href="thread.html" data-path="thread.html">Thread</a></li>
+        <li><a href="sift.html" data-path="sift.html">Sift</a></li>
+        <li><a href="hybrid.html" data-path="hybrid.html">Hybrid</a></li>
+        <li><a href="machine.html" class="cta" data-path="machine.html">For AI ▸</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-head">
+      <div class="wrap">
+        <div class="crumb"><a href="index.html">← Being Zetetic</a> &nbsp;/&nbsp; Mode 03</div>
+        <h1><span class="em">Zetetic</span>-Socratic Hybrid.</h1>
+        <p class="sub">Thread + Sift, alternating phase by phase. Build a concept, test it, build the next. The complete protocol — for when you need to understand something forever, not just today.</p>
+        <div class="meta">
+          <div>Best for · <span>complete mastery with retention</span></div>
+          <div>Format · <span>thought-map interleaved with MCQs</span></div>
+          <div>Length · <span>scales to syllabus depth</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="wrap prose">
+        <h2>What it does</h2>
+        <p>Hybrid interleaves the two modes. After every concept-building phase (Thread), a testing phase (Sift) confirms the concept actually landed. The reader doesn't just read — they're forced to choose, justify, and tether before moving on.</p>
+        <p>The Socratic element: the AI is forbidden from telling. It can only ask, and the reader's correct answer is the proof of understanding.</p>
+
+        <h2>When to use it</h2>
+        <ul>
+          <li>The subject matters and you'll need it long-term, not just for an exam.</li>
+          <li>You want both the conceptual map and the test of recall in one document.</li>
+          <li>You're building a foundation you'll keep building on — fundamentals, first-principles domains.</li>
+          <li>You're tired of re-learning the same things every year.</li>
+        </ul>
+
+        <h2>The cycle</h2>
+        <p>The document alternates <code>── THREAD ──</code> and <code>── SIFT ──</code> blocks. The cycle ends on a Sift block, so the final checkpoint tests the entire document.</p>
+
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="lbl">— Phase 1 —</div>
+            <h4>── THREAD ──</h4>
+            <p>Open a concept with a question. Answer in one sentence. Raise the next question. 80–200 words.</p>
+          </div>
+          <div class="feature">
+            <div class="lbl">— Phase 2 —</div>
+            <h4>── SIFT ──</h4>
+            <p>Test the concept with 2 MCQs. Each option justified in one line. Tether to what comes next.</p>
+          </div>
+          <div class="feature">
+            <div class="lbl">— Phase 3 —</div>
+            <h4>── THREAD ──</h4>
+            <p>Build on what was just tested. The tether line in Sift sets up the next question.</p>
+          </div>
+          <div class="feature">
+            <div class="lbl">— Phase N —</div>
+            <h4>── SIFT ──</h4>
+            <p>End on a Sift. Final checkpoint: 4 questions covering the entire document. No answers provided.</p>
+          </div>
+        </div>
+
+        <div class="example"><span class="acc">── THREAD ──
+
+❓ What is a "system"?
+
+→ A system is a set of parts that interact to produce a
+   behavior that no single part produces alone.
+
+→ The word comes from Greek <span class="acc">systēma</span> — "a whole
+   composed of many". Remove one part, and the behavior
+   changes — sometimes vanishes entirely.
+
+Think of a clock: gears, springs, hands. None shows the time.
+Together, they do.
+
+➜ NEXT QUESTION: "If the pattern of interaction is what
+   makes the system, what happens when the parts stop
+   interacting — is the system gone?"
+
+── SIFT ──
+
+🧩 CONTEXT
+We just defined a system by its pattern of interaction.
+
+❓ Q1: You take a clock apart and lay the gears on the table.
+   The clock is now…
+A) Destroyed — the parts no longer work
+B) ✅ A collection — the parts are intact, the pattern is gone
+C) Still a clock — the system exists independent of arrangement
+D) A different system — the gears interact with the table
+
+✅ Why B is right: A collection has the parts without the
+   pattern. That's exactly what remains.
+❌ Why A, C, D are wrong: (1 line each)
+
+🔗 TETHER: This matters because in Phase 4 we'll see that
+   some systems can be re-instantiated — the same pattern,
+   different parts.
+
+📍 CHECKPOINT
+1. What makes a system a system?
+2. Why is a pile of gears not a clock?
+
+(answers at the bottom of Phase 3)</span></div>
+
+        <h2>The full prompt</h2>
+
+        <div class="prompt-box">
+          <div class="label">— Hybrid prompt —</div>
+          <pre id="hybrid-prompt">Loading…</pre>
+          <button class="btn primary copy-btn" data-copy="hybrid">Copy <span class="arrow">▶</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="label">— Related —</div>
+          <h2>Other modes</h2>
+        </div>
+        <div class="modes">
+          <div class="mode">
+            <div class="num">— 01 —</div>
+            <h3>Zetetic Thread</h3>
+            <p>Pure thought-map flow. Use this if you don't want the test phases.</p>
+            <div class="actions"><a href="thread.html" class="btn">View Thread →</a></div>
+          </div>
+          <div class="mode">
+            <div class="num">— 02 —</div>
+            <h3>Zetetic Sift</h3>
+            <p>MCQ-only stream. Use this if you already understand the material and need to lock it in.</p>
+            <div class="actions"><a href="sift.html" class="btn">View Sift →</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="copy">© Being Zetetic — built for the eternally curious.</div>
+      <div class="links">
+        <a href="thread.html">Thread</a>
+        <a href="sift.html">Sift</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="machine.html">Machine</a>
+      </div>
+    </div>
+  </footer>
+<script src="assets/prompts.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    document.getElementById('hybrid-prompt').textContent = window.BZ_PROMPTS.hybrid;
+  </script>
+</body>
+</html>
