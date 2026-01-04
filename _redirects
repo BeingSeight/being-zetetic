@@ -1,0 +1,7 @@
+/thread            /thread.html            200
+/sift              /sift.html              200
+/hybrid            /hybrid.html            200
+/machine           /machine.html           200
+/machine/thread    /machine-thread.html    200
+/machine/sift      /machine-sift.html      200
+/machine/hybrid    /machine-hybrid.html    200

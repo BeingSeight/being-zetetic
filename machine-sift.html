@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>/machine/sift · Being Zetetic</title>
+  <meta name="description" content="Raw Zetetic Sift prompt for AI agents." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="machine-page">
+    <div class="mp-wrap">
+      <div class="mp-head">
+        <div class="crumb"><a href="machine.html">← /machine</a> &nbsp;/&nbsp; sift</div>
+        <h1>/machine/sift</h1>
+        <p class="dim">Raw Zetetic Sift prompt. Copy the body, append a syllabus, execute.</p>
+      </div>
+      <pre class="mp-body" id="mp-body">Loading…</pre>
+      <div class="mp-actions">
+        <button class="btn primary" data-copy="sift">Copy prompt <span class="arrow">▶</span></button>
+        <a href="machine.html" class="btn">← Hub</a>
+        <a href="index.html" class="btn">Human page</a>
+      </div>
+    </div>
+  </div>
+  <script src="assets/prompts.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    document.getElementById('mp-body').textContent = window.BZ_PROMPTS.sift;
+  </script>
+</body>
+</html>
