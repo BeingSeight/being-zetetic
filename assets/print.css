@@ -1,0 +1,197 @@
+/* ─── BEING ZETETIC · PRINT STYLES (PDF) ─── */
+
+@page {
+  size: A4;
+  margin: 22mm 18mm 22mm 18mm;
+}
+@page :first { margin-top: 30mm; }
+
+* { box-sizing: border-box; }
+
+body {
+  background: #ffffff !important;
+  color: #0a0a0f !important;
+  font-family: 'Iowan Old Style', 'Georgia', 'Times New Roman', serif;
+  font-size: 11pt;
+  line-height: 1.55;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Hide nav, footer, and anything that's a screen-only element */
+nav.top, footer, .maker, [data-partial="footer"], [data-partial="maker"],
+.no-print, .btn, button, .copy-btn, .spinner, .hub-item a.btn,
+.maker .links, .step .n, .eyebrow {
+  display: none !important;
+}
+
+/* Cover */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  page-break-after: always;
+  padding: 30mm 0;
+}
+.cover .eyebrow-p {
+  font-family: 'JetBrains Mono', 'Menlo', monospace;
+  font-size: 9pt;
+  letter-spacing: 0.25em;
+  color: #1a8a7e;
+  text-transform: uppercase;
+  margin-bottom: 24pt;
+}
+.cover h1 {
+  font-family: 'Iowan Old Style', 'Georgia', serif;
+  font-size: 56pt;
+  font-weight: 400;
+  font-style: italic;
+  color: #0a0a0f;
+  margin: 0 0 12pt;
+  line-height: 1;
+}
+.cover h1 .em { color: #1a8a7e; }
+.cover .tagline {
+  font-size: 14pt;
+  color: #555;
+  font-style: italic;
+  max-width: 80%;
+  margin: 0 auto 32pt;
+  line-height: 1.4;
+}
+.cover .meta-block {
+  font-family: 'JetBrains Mono', 'Menlo', monospace;
+  font-size: 9pt;
+  color: #777;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  text-transform: uppercase;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 16pt 24pt;
+  display: inline-block;
+}
+
+/* Sections */
+section.p-section {
+  padding: 0;
+  margin: 0;
+  border: none !important;
+  page-break-before: always;
+}
+section.p-section:first-of-type { page-break-before: auto; }
+
+section.p-section h2 {
+  font-family: 'Iowan Old Style', 'Georgia', serif;
+  font-size: 22pt;
+  font-weight: 400;
+  color: #0a0a0f;
+  margin: 0 0 6pt;
+  border-bottom: 1px solid #1a8a7e;
+  padding-bottom: 8pt;
+}
+section.p-section h2 .em { color: #1a8a7e; font-style: italic; }
+section.p-section h3 {
+  font-family: 'JetBrains Mono', 'Menlo', monospace;
+  font-size: 10pt;
+  font-weight: 600;
+  color: #1a8a7e;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 24pt 0 12pt;
+}
+
+.prompt-doc {
+  font-family: 'JetBrains Mono', 'Menlo', 'Courier New', monospace;
+  font-size: 9pt;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #1a1a1a;
+  background: #fafafa;
+  border-left: 3px solid #1a8a7e;
+  padding: 16pt 20pt;
+  margin: 12pt 0 18pt;
+  page-break-inside: avoid;
+}
+
+.example-doc {
+  font-family: 'Iowan Old Style', 'Georgia', serif;
+  font-size: 10.5pt;
+  line-height: 1.65;
+  color: #1a1a1a;
+  background: #fafafa;
+  border-left: 3px solid #1a8a7e;
+  padding: 18pt 22pt;
+  margin: 12pt 0 18pt;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.example-doc .acc { color: #1a8a7e; font-weight: 500; }
+.example-doc strong { color: #0a0a0f; }
+
+.intro {
+  font-size: 11pt;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 18pt;
+  max-width: 100%;
+  font-style: italic;
+}
+
+.toc {
+  page-break-after: always;
+  padding: 30mm 0;
+}
+.toc h2 {
+  font-family: 'Iowan Old Style', 'Georgia', serif;
+  font-size: 22pt;
+  font-weight: 400;
+  color: #0a0a0f;
+  border-bottom: 1px solid #1a8a7e;
+  padding-bottom: 8pt;
+  margin: 0 0 24pt;
+}
+.toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toc ol li {
+  font-family: 'Iowan Old Style', 'Georgia', serif;
+  font-size: 12pt;
+  padding: 8pt 0;
+  border-bottom: 1px dotted #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+.toc ol li .n {
+  font-family: 'JetBrains Mono', 'Menlo', monospace;
+  font-size: 9pt;
+  color: #1a8a7e;
+  letter-spacing: 0.1em;
+}
+
+.signature-block {
+  font-family: 'JetBrains Mono', 'Menlo', monospace;
+  font-size: 8.5pt;
+  line-height: 1.7;
+  color: #444;
+  border-top: 1px solid #1a8a7e;
+  border-bottom: 1px solid #1a8a7e;
+  padding: 12pt 16pt;
+  margin: 18pt 0;
+  white-space: pre-wrap;
+  background: #f8f8f8;
+}
+.signature-block .acc { color: #1a8a7e; font-weight: 600; }
+
+.print-only { display: block; }
+.screen-only { display: none; }
+
+/* Page break helpers */
+.pb { page-break-before: always; }
+.pba { page-break-after: always; }
+.pbi { page-break-inside: avoid; }

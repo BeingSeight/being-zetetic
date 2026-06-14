@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://beingzetetic.com/sitemap.xml
+Sitemap: https://{{SITE_URL}}/sitemap.xml

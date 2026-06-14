@@ -3,7 +3,7 @@
 > The learning protocol for lifelong mastery of anything.
 > Become the Being that inquires.
 
-**Live site:** [beingzetetic.com](https://beingzetetic.com)
+**Live site:** [{{SITE_URL}}](https://{{SITE_URL}})
 **Made by:** [BeingSeight](https://github.com/BeingSeight) · Driven by Mnemethos
 **Stack:** Static site. Zero backend. Zero build step.
 
@@ -80,7 +80,7 @@ Edit once, updates everywhere.
 2. In Cloudflare Pages, "Create application" → "Pages" → "Connect to Git".
 3. Select the repo. Build command: *(none)*. Build output: `/`.
 4. Deploy. Cloudflare serves `/thread` from `thread.html` natively — no `_redirects` needed.
-5. Add the custom domain `beingzetetic.com` in the Pages project.
+5. Add the custom domain `{{SITE_URL}}` in the Pages project.
 
 ### Netlify
 

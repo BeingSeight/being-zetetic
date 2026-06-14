@@ -6,17 +6,17 @@
   <title>Blockchain Basics — A Being Zetetic example · Thread mode</title>
   <meta name="description" content="A complete Zetetic Thread output on blockchain fundamentals, built one question at a time." />
   <meta name="theme-color" content="#07151a" />
-  <link rel="canonical" href="https://beingzetetic.com/examples/blockchain-basics" />
+  <link rel="canonical" href="https://{{SITE_URL}}/examples/blockchain-basics" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://beingzetetic.com/examples/blockchain-basics" />
+  <meta property="og:url" content="https://{{SITE_URL}}/examples/blockchain-basics" />
   <meta property="og:title" content="Blockchain Basics — A Being Zetetic example · Thread mode" />
   <meta property="og:description" content="A complete Zetetic Thread output on blockchain fundamentals." />
-  <meta property="og:image" content="https://beingzetetic.com/assets/og-card.png" />
+  <meta property="og:image" content="https://{{SITE_URL}}/assets/og-card.png" />
   <meta property="og:site_name" content="Being Zetetic" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blockchain Basics — A Being Zetetic example" />
   <meta name="twitter:description" content="A complete Zetetic Thread output on blockchain fundamentals." />
-  <meta name="twitter:image" content="https://beingzetetic.com/assets/og-card.png" />
+  <meta name="twitter:image" content="https://{{SITE_URL}}/assets/og-card.png" />
   <meta name="twitter:creator" content="@BeingSeight" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
@@ -52,198 +52,168 @@
 
     <section class="content">
       <div class="wrap prose">
-        <div class="example">─── PHASE 1 ───
+        <div class="example">---
+title: "What is a Blockchain?"
+author: "Generated via Being Zetetic · Zetetic Thread"
+date: "2026-06-15"
+geometry: margin=2.2cm
+fontsize: 11pt
+---
 
-❓ What is a list?
+# What is a Blockchain?
 
-→ A list is a sequence of items in a particular order.
+> *A no-hype foundation. From "what is a list" to "why is a
+> hash unforgeable."*
 
-→ The word <span class="acc">list</span> comes from Old English
-   <span class="acc">liste</span> — "a strip, a border, a row". A list
-   is a row of things. The order is part of what makes it
-   a list; the same items in a different order are a
-   different list.
+---
 
-Think of a list as a queue at a coffee shop. The first
-person in line is served first. The order matters.
+## 📖 Overview
 
-➜ NEXT QUESTION: "If a list is just a sequence, what's
-   special about appending an item to it — what does
-   'appending' actually do?"
+This document walks you, one question at a time, from the simplest idea of a list to the architecture of a blockchain. By the end, you should be able to explain, to a non-technical friend, why a blockchain exists, what problem it solves that an ordinary database doesn't, and what a hash function has to do with any of it.
 
-─── PHASE 2 ───
+---
 
-❓ What does "appending" do?
+## 🧭 Map
 
-→ Appending means: take the current list, and produce a
-   new list that is identical except for one extra item
-   at the end.
+- **Phase 1.** What is a list?
+- **Phase 2.** What does "appending" do?
+- **Phase 3.** What does the latest list contain that the first one doesn't?
+- **Phase 4.** What stops one place from being dishonest about the ledger?
+- **Phase 5.** How do 10,000 copies agree on a new entry?
+- **Phase 6.** When does a new entry "stick"?
+- **Phase 7.** Why do we call this whole structure a "block"-chain?
+- **Phase 8.** What is a fingerprint of a block?
 
-→ Crucially, appending does <em>not</em> change the old list.
-   The old list still exists, in its original form, with
-   its original length. The new list is a separate thing
-   that contains everything the old one did, plus the new
-   item.
+---
 
-In a notebook, you can't unwrite a page. But you can take
-a fresh notebook and copy every page from the old one,
-then add your new page. The new notebook is the appended
-list. The old one is still around.
+## 🧵 The Thread
 
-➜ NEXT QUESTION: "If we never change old lists and we only
-   append, what does the latest list look like compared
-   to the first one?"
+### ❓ Phase 1 — Lists
 
-─── PHASE 3 ───
+> What is a list?
 
-❓ What does the latest list contain that the first one
-   doesn't?
+**Answer.** A list is a sequence of items in a particular order.
 
-→ Every item that was ever appended, in the order it was
-   appended.
+**Why this matters.** The word *list* comes from Old English *liste* — "a strip, a border, a row." A list is a row of things. The order is part of what makes it a list; the same items in a different order are a different list. Think of a list as a queue at a coffee shop: the first person in line is served first. The order matters.
 
-→ This is the key insight: an append-only list is a
-   <em>history</em>. It is the complete record of everything
-   that ever happened, in order. Nothing was edited. Nothing
-   was deleted. Nothing was rewritten. Every fact is
-   preserved exactly as it was added.
+➡️ **Next question.** If a list is just a sequence, what's special about appending an item to it — what does "appending" actually do?
 
-The word <span class="acc">ledger</span> means exactly this: a book
-of accounts where each entry is added but never altered.
-A bank's ledger is an append-only list. So is a court
-record. So is a blockchain.
+---
 
-➜ NEXT QUESTION: "If the list lives in one place — one
-   computer, one notebook — what stops that one place
-   from being dishonest about what it contains?"
+### ❓ Phase 2 — Append-only
 
-─── PHASE 4 ───
+> What does "appending" do?
 
-❓ What stops one place from being dishonest about the
-   ledger?
+**Answer.** Appending means: take the current list, and produce a new list that is identical except for one extra item at the end. Crucially, appending does *not* change the old list. The old list still exists, in its original form, with its original length.
 
-→ If only one copy exists, nothing. The holder of that
-   copy can change it, deny entries, or fabricate ones
-   that never happened.
+**Why this matters.** In a notebook, you can't unwrite a page. But you can take a fresh notebook and copy every page from the old one, then add your new page. The new notebook is the appended list. The old one is still around.
 
-→ The fix is <span class="acc">distribution</span>: keep thousands of
-   identical copies of the list on thousands of different
-   computers, run by thousands of different people, in
-   thousands of different jurisdictions. No single one
-   of them can change the list without the other 9,999
-   disagreeing.
+➡️ **Next question.** If we never change old lists and we only append, what does the latest list look like compared to the first one?
 
-Think of a town square announcement board. If only the
-mayor has a copy, the mayor can rewrite history. If
-every citizen has a copy and they compare notes weekly,
-the mayor would have to convince every citizen to
-rewrite at the same time.
+---
 
-➜ NEXT QUESTION: "If we have 10,000 copies, how do they
-   agree on what's in the list — what's the rule for
-   adding a new entry?"
+### ❓ Phase 3 — History
 
-─── PHASE 5 ───
+> What does the latest list contain that the first one doesn't?
 
-❓ How do 10,000 copies agree on a new entry?
+**Answer.** Every item that was ever appended, in the order it was appended.
 
-→ Through <span class="acc">consensus</span>: a rule, agreed in advance,
-   for what counts as a valid new entry.
+**Why this matters.** This is the key insight: an append-only list is a *history*. It is the complete record of everything that ever happened, in order. Nothing was edited. Nothing was deleted. Nothing was rewritten. The word *ledger* means exactly this: a book of accounts where each entry is added but never altered. A bank's ledger is an append-only list. So is a court record. So is a blockchain.
 
-→ The most famous rule is "proof of work": to add a new
-   entry, you must do a small but real amount of
-   computational work that the others can quickly verify.
-   If you cheat, the others reject your entry. If you
-   do the work honestly, the others accept it and add
-   it to their copies.
+➡️ **Next question.** If the list lives in one place — one computer, one notebook — what stops that one place from being dishonest about what it contains?
 
-The work is a kind of tax. It costs you time and
-electricity, but it costs the cheater more than the
-honest participant. The system is designed so that
-honesty is cheaper than cheating.
+---
 
-➜ NEXT QUESTION: "When does a new entry become part of
-   the official list — how do we know it stuck?"
+### ❓ Phase 4 — Distribution
 
-─── PHASE 6 ───
+> What stops one place from being dishonest about the ledger?
 
-❓ When does a new entry "stick"?
+**Answer.** If only one copy exists, nothing. The holder of that copy can change it, deny entries, or fabricate ones that never happened. The fix is *distribution*: keep thousands of identical copies of the list on thousands of different computers, run by thousands of different people, in thousands of different jurisdictions.
 
-→ When enough copies have accepted it that reversing
-   the decision would be more expensive than accepting it.
+**Why this matters.** No single one of them can change the list without the other 9,999 disagreeing. Trust is replaced by agreement among many.
 
-→ In Bitcoin, the rule is "six confirmations" — once six
-   more entries have been added on top of yours, the
-   cost of rewriting history is so high that the entry
-   is considered final.
+➡️ **Next question.** If we have 10,000 copies, how do they agree on what's in the list — what's the rule for adding a new entry?
 
-The metaphor: each new entry is a layer of concrete
-poured on top of the previous one. After enough layers,
-the bottom is permanent.
+---
 
-➜ NEXT QUESTION: "Why do we call this whole structure a
-   'block'chain?"
+### ❓ Phase 5 — Consensus
 
-─── PHASE 7 ───
+> How do 10,000 copies agree on a new entry?
 
-❓ Why "block-chain"?
+**Answer.** Through *consensus*: a rule, agreed in advance, for what counts as a valid new entry. The most famous rule is "proof of work": to add a new entry, you must do a small but real amount of computational work that the others can quickly verify.
 
-→ Because the entries are bundled into <span class="acc">blocks</span>,
-   and each block contains a reference to the block that
-   came before it. The references form a <span class="acc">chain</span>.
+**Why this matters.** The work is a kind of tax. It costs time and electricity, but it costs the cheater more than the honest participant. The system is designed so that honesty is cheaper than cheating.
 
-→ Each block holds a few hundred entries. At the end of
-   the block is a pointer — a kind of fingerprint — of
-   the previous block. Change one character in any
-   previous block, and the fingerprint breaks, and every
-   honest copy knows the chain has been tampered with.
+➡️ **Next question.** When does a new entry become part of the official list — how do we know it stuck?
 
-Think of the chain as a stack of sealed envelopes. Each
-envelope contains a list of transactions and the seal
-of the envelope below it. If you break the seal of any
-envelope, every envelope above it becomes invalid.
+---
 
-➜ NEXT QUESTION: "What does a 'fingerprint' of a block
-   look like, and why is it useful?"
+### ❓ Phase 6 — Finality
 
-─── PHASE 8 ───
+> When does a new entry "stick"?
 
-❓ What is a fingerprint of a block?
+**Answer.** When enough copies have accepted it that reversing the decision would be more expensive than accepting it.
 
-→ A <span class="acc">hash</span> — a fixed-length string of characters
-   produced by running the block's contents through a
-   mathematical function. The same input always produces
-   the same hash. Even a tiny change in the input
-   produces a totally different hash.
+**Why this matters.** In Bitcoin, the rule is "six confirmations" — once six more entries have been added on top of yours, the cost of rewriting history is so high that the entry is considered final. The metaphor: each new entry is a layer of concrete poured on top of the previous one. After enough layers, the bottom is permanent.
 
-→ A good hash function is one-way: you can compute the
-   hash from the input, but you cannot compute the input
-   from the hash. This is what makes a fingerprint
-   <em>useful</em>: you can verify that the input matches
-   the fingerprint, but you cannot forge an input that
-   matches a fingerprint you made up.
+➡️ **Next question.** Why do we call this whole structure a "block"-chain?
 
-The word <span class="acc">hash</span> comes from the French <span class="acc">hacher</span> —
-"to chop up". A hash chops the input into a fixed-size
-pulp that cannot be reassembled.
+---
 
-─── CHECKPOINT ───
+### ❓ Phase 7 — Block-chain
+
+> Why "block-chain"?
+
+**Answer.** Because the entries are bundled into *blocks*, and each block contains a reference to the block that came before it. The references form a *chain*.
+
+**Why this matters.** Each block holds a few hundred entries. At the end of the block is a pointer — a kind of fingerprint — of the previous block. Change one character in any previous block, and the fingerprint breaks, and every honest copy knows the chain has been tampered with. Think of the chain as a stack of sealed envelopes. If you break the seal of any envelope, every envelope above it becomes invalid.
+
+➡️ **Next question.** What does a "fingerprint" of a block look like, and why is it useful?
+
+---
+
+### ❓ Phase 8 — Hashes
+
+> What is a fingerprint of a block?
+
+**Answer.** A *hash* — a fixed-length string of characters produced by running the block's contents through a mathematical function. The same input always produces the same hash. Even a tiny change in the input produces a totally different hash.
+
+**Why this matters.** A good hash function is one-way: you can compute the hash from the input, but you cannot compute the input from the hash. The word *hash* comes from the French *hacher* — "to chop up." A hash chops the input into a fixed-size pulp that cannot be reassembled.
+
+---
+
+## 🧠 Concept Index
+
+- **List** — A sequence of items in a particular order. (From Old English *liste*, "a strip, a border, a row.")
+- **Append-only list** — A list where items are only added, never removed or modified. The complete history of everything that ever happened.
+- **Ledger** — A book of accounts where each entry is added but never altered. A bank's ledger, a court record, and a blockchain are all ledgers.
+- **Distribution** — Keeping thousands of identical copies of the ledger on thousands of different computers, so no single party can rewrite history.
+- **Consensus** — A rule, agreed in advance, for what counts as a valid new entry. Proof of work is the most famous example.
+- **Block** — A bundle of entries, with a fingerprint of the previous block at the end.
+- **Chain** — The series of blocks, each referencing the one before it, forming an unbroken, tamper-evident structure.
+- **Hash** — A fixed-length fingerprint of data, produced by a one-way function. Same input always gives the same hash; even a tiny change in input produces a totally different hash. (From French *hacher*, "to chop up.")
+
+---
+
+## ✅ Final Checkpoint
+
 1. In one sentence, what is a blockchain?
 2. Why is an append-only list more useful than a mutable one?
 3. What problem does distribution solve?
 4. Why does a hash make a good fingerprint?
+5. In what sense is proof of work a "tax"?
 
-────── ANSWERS ──────
-1. A blockchain is an append-only ledger, distributed across
-   thousands of computers, where each new bundle of entries
-   ("block") contains a reference to the bundle before it,
-   forming an unbreakable chain.
-2. Append-only lists preserve history. Mutable ones let
-   history be rewritten.
-3. Distribution removes the need to trust any single holder
-   of the ledger. Trust is replaced by agreement among many.
-4. A hash is one-way and tiny changes produce huge changes,
-   so it is a reliable, unforgeable fingerprint of large data.</div>
+---
+
+## 📚 Further Paths
+
+- **Merkle trees** — *Builds on Phase 8. How to cheaply prove a single transaction is in a block, without revealing the whole block.*
+- **Smart contracts** — *Builds on Phase 5. Programs that live on the blockchain and execute when the consensus rules are met.*
+- **Layer 2 protocols** — *Builds on Phase 6. How to get most of the security of a blockchain with a fraction of the cost and time.*
+
+---
+
+*Generated by the Being Zetetic protocol · Driven by Mnemethos*</div>
 
         <h2>Try it on your own syllabus</h2>
         <p>This output was generated using the Zetetic Thread prompt. Use it on any topic you want to actually own — not just recognize.</p>

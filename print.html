@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Being Zetetic — Printable Protocol Book</title>
+  <meta name="description" content="All three Zetetic modes + pre-generated examples, formatted for print and PDF." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/print.css" />
+  <style>
+    /* Screen-only chrome (hidden when printing) */
+    .print-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(7, 21, 26, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px;
+      font-family: var(--mono); font-size: 0.8rem;
+      color: var(--fg-dim);
+    }
+    .print-bar .title { color: var(--fg); }
+    .print-bar .actions { display: flex; gap: 8px; }
+    .print-bar button {
+      font-family: var(--mono); font-size: 0.78rem;
+      padding: 8px 14px; border-radius: 6px;
+      background: var(--acc); color: var(--bg); border: 1px solid var(--acc);
+      cursor: pointer; font-weight: 500;
+    }
+    .print-bar button.ghost {
+      background: transparent; color: var(--fg-dim); border-color: var(--border-strong);
+    }
+    .print-bar button:hover { filter: brightness(1.1); }
+    @media print {
+      .print-bar { display: none; }
+      body { padding-top: 0; }
+    }
+    .print-body { padding-top: 64px; }
+  </style>
+</head>
+<body>
+  <div class="print-bar no-print">
+    <div class="title">Being Zetetic · Printable Protocol Book</div>
+    <div class="actions">
+      <button class="ghost" onclick="window.close()">Close</button>
+      <button onclick="window.print()">🖨 Print to PDF</button>
+    </div>
+  </div>
+
+  <div class="print-body">
+
+    <!-- COVER -->
+    <section class="cover">
+      <div class="eyebrow-p">— A learning protocol —</div>
+      <h1>Being <span class="em">Zetetic</span></h1>
+      <p class="tagline">The learning protocol for lifelong mastery of anything.<br/>Become the Being that inquires.</p>
+      <div class="meta-block">
+        Three modes · Three examples · One stance<br/>
+        Made by BeingSeight · Driven by Mnemethos
+      </div>
+    </section>
+
+    <!-- TABLE OF CONTENTS -->
+    <section class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><span><span class="n">PART 01</span> &nbsp; Zetetic Thread — prompt & example</span><span>p. 1</span></li>
+        <li><span><span class="n">PART 02</span> &nbsp; Zetetic Sift — prompt & example</span><span>p. 4</span></li>
+        <li><span><span class="n">PART 03</span> &nbsp; Zetetic-Socratic Hybrid — prompt & example</span><span>p. 7</span></li>
+        <li><span><span class="n">APPENDIX A</span> &nbsp; On Mnemethos</span><span>p. 10</span></li>
+        <li><span><span class="n">APPENDIX B</span> &nbsp; The signature</span><span>p. 12</span></li>
+      </ol>
+    </section>
+
+    <!-- PART 01: THREAD -->
+    <section class="p-section">
+      <h2>Part 01 — <span class="em">Zetetic Thread</span></h2>
+      <p class="intro">A pure thought-map. Every concept arises as a question from the previous one. The reader is never told anything they could have asked — they are led to ask it themselves, then given the answer in one clean sentence. Best for: deep first-time understanding.</p>
+
+      <h3>The prompt</h3>
+      <div class="prompt-doc" id="thread-prompt">Loading…</div>
+
+      <h3>Worked example — "What is an OS?"</h3>
+      <div class="example-doc"><span class="acc">---</span>
+title: "What is an Operating System?"
+author: "Generated via Being Zetetic · Zetetic Thread"
+
+# What is an Operating System?
+
+> *A complete Zetetic Thread on operating systems.*
+
+---
+
+## 📖 Overview
+
+This document walks you, one question at a time, from "what is a computer" to "how does the kernel schedule processes." After working through it, you should be able to rebuild the entire mental model of an operating system from a single seed question — and explain to a non-technical friend why a computer without an OS would be a disaster.
+
+---
+
+## 🧭 Map
+
+- **Phase 1.** What is the most basic thing a computer does?
+- **Phase 2.** Where do the instructions come from?
+- **Phase 3.** Who decides what runs, and when?
+- **Phase 4.** Who loads the OS in the first place?
+- **Phase 5.** Why can't programs talk to hardware directly?
+- **Phase 6.** How is the OS organized inside?
+- **Phase 7.** How does the kernel share the CPU?
+
+---
+
+## 🧵 The Thread
+
+### ❓ Phase 1 — The first thing
+
+> What is the most basic thing a computer does?
+
+**Answer.** It executes instructions, one after another, with absolute precision.
+
+**Why this matters.** Every other concept in this document — memory, programs, the OS, the kernel — is an answer to the question *"where do those instructions come from, and who decides what to read next?"*
+
+➡️ **Next question.** If the computer just reads instructions, where do those instructions come from — and who decides what to read next?
+
+---
+
+### ❓ Phase 2 — Memory
+
+> Where do the instructions come from?
+
+**Answer.** From memory. A computer has two kinds: the programs (the instructions themselves) and the data (what the instructions operate on). Both live in memory.
+
+**Why this matters.** Memory is the desk where the work happens. The CPU is the hand that picks up the next item. Without the desk, the hand has nowhere to put anything.
+
+---
+
+### ❓ Phase 3 — The OS
+
+> Who decides what runs, and when?
+
+**Answer.** The operating system.
+
+**Why this matters.** The word *operating* is the key. The OS doesn't just "run" — it operates, the way a manager operates a kitchen: scheduling cooks, distributing ingredients, making sure no two cooks burn down the same stove.
+
+---
+
+### ❓ Phase 4 — The bootloader
+
+> Who loads the OS in the first place?
+
+**Answer.** A small program called the bootloader, which lives in a special, protected region of the disk that the CPU knows to look at the moment it powers on.
+
+**Why this matters.** The chain is: power on → CPU looks at a fixed address → finds the bootloader → bootloader loads the OS → OS takes over.
+
+---
+
+### ❓ Phase 5 — System calls
+
+> Why can't programs talk to hardware directly?
+
+**Answer.** Three reasons. First, two programs might try to use the same hardware at once. Second, a buggy program could crash the entire machine. Third, you'd have to rewrite every program for every kind of disk, network card, and printer that exists.
+
+**Why this matters.** The OS solves all three by sitting between programs and hardware. Programs make a *system call* — a polite, well-defined request — and the OS arbitrates.
+
+---
+
+### ❓ Phase 6 — Kernel vs user space
+
+> How is the OS organized inside?
+
+**Answer.** In two big halves. The *kernel* runs with full hardware access and is the only part allowed to talk directly to devices. Everything else — the file browser, the settings panel, the command line — is just a regular program that asks the kernel to do things.
+
+**Why this matters.** The kernel is the only part of the OS that, if it crashes, takes the whole machine down.
+
+---
+
+### ❓ Phase 7 — Multitasking
+
+> How does the kernel share the CPU?
+
+**Answer.** By pretending. The kernel rapidly switches the CPU between programs — thousands of times per second — so that each one appears to have the machine to itself.
+
+**Why this matters.** This trick is called *preemptive multitasking*. The illusion of simultaneity is just fast switching.
+
+---
+
+## ✅ Final Checkpoint
+
+1. In one sentence, what is the kernel's job?
+2. Why is the bootloader so much smaller than the OS?
+3. What is a system call, and why does it exist?
+4. In what sense is "multitasking" an illusion?
+5. Why does the kernel sit between programs and hardware instead of letting them talk directly?
+
+---
+
+*Generated by the Being Zetetic protocol · Driven by Mnemethos*</div>
+    </section>
+
+    <!-- PART 02: SIFT -->
+    <section class="p-section">
+      <h2>Part 02 — <span class="em">Zetetic Sift</span></h2>
+      <p class="intro">An MCQ-based stream. One-liner questions with 4 options, then one-liner explanations of why each is right or wrong. Every wrong answer is plausible to a hasty reader — that's what makes it work. Best for: active recall and exam preparation.</p>
+
+      <h3>The prompt</h3>
+      <div class="prompt-doc" id="sift-prompt">Loading…</div>
+
+      <h3>Worked example — "What is a System?"</h3>
+      <div class="example-doc">─── Q1 ───
+
+🧩 CONTEXT
+We just learned a system is a pattern of interaction, not its parts.
+
+❓ Q1: A clock is on the table. You take it apart and lay the
+   gears on the table. The clock is now…?
+A) Destroyed — the parts no longer work
+B) ✅ A collection — the parts are intact, the pattern is gone
+C) Still a clock — the system exists independent of arrangement
+D) A different system — the gears now interact with the table
+
+✅ Why B is RIGHT: A collection has the parts without the pattern of
+   interaction; that's exactly what remains.
+❌ Why A is WRONG: "Destroyed" implies the parts are gone. They aren't.
+❌ Why C is WRONG: The system <span class="acc">is</span> the pattern. No pattern, no system.
+❌ Why D is WRONG: The gears on a table aren't interacting with the
+   table in any meaningful pattern.
+
+🔗 TETHER: This matters because in Phase 4 we'll see exactly
+HOW the OS mediates — through a mechanism called system
+calls. Think of them as the specific "hand signals" a cook
+uses to request the manager's attention.
+
+─── Q2 ───
+
+❓ Q2: What happens if there is no OS?
+A) Programs run faster without the OS overhead
+B) ✅ Every program must include its own hardware drivers
+   and resource management code
+C) The computer cannot power on
+D) Hardware automatically manages itself
+
+✅ Why B is RIGHT: Without OS, each program duplicates
+the same boilerplate hardware code — impossible for
+complex systems.
+❌ Why A is WRONG: There's no "overhead" to remove — the
+work the OS does is necessary work. Without OS, each
+app does it (worse).
+❌ Why C is WRONG: The computer boots; it just can't run
+multiple programs efficiently or safely.
+❌ Why D is WRONG: Hardware has no built-in management
+logic for multi-program scenarios.
+
+📍 CHECKPOINT (before moving on):
+1. In one sentence, what does an OS DO?
+2. What's wrong with the "toolbox" analogy for OS?
+
+(Answers at bottom of Phase 3)</div>
+    </section>
+
+    <!-- PART 03: HYBRID -->
+    <section class="p-section">
+      <h2>Part 03 — <span class="em">Zetetic-Socratic Hybrid</span></h2>
+      <p class="intro">Thread + Sift, alternating phase by phase. Build a concept, test it, build the next. The complete protocol — for when you need to understand something forever, not just today. Best for: complete mastery with retention.</p>
+
+      <h3>The prompt</h3>
+      <div class="prompt-doc" id="hybrid-prompt">Loading…</div>
+
+      <h3>Worked example — Thread + Sift interleaved</h3>
+      <div class="example-doc">── THREAD ──
+
+❓ What is a "system"?
+
+→ A system is a set of parts that interact to produce a
+   behavior that no single part produces alone.
+
+→ The word comes from Greek <span class="acc">systēma</span> — "a whole
+   composed of many". Remove one part, and the behavior
+   changes — sometimes vanishes entirely.
+
+Think of a clock: gears, springs, hands. None shows the time.
+Together, they do.
+
+➜ NEXT QUESTION: "If the pattern of interaction is what
+   makes the system, what happens when the parts stop
+   interacting — is the system gone?"
+
+── SIFT ──
+
+🧩 CONTEXT
+We just defined a system by its pattern of interaction.
+
+❓ Q1: You take a clock apart and lay the gears on the table.
+   The clock is now…
+A) Destroyed — the parts no longer work
+B) ✅ A collection — the parts are intact, the pattern is gone
+C) Still a clock — the system exists independent of arrangement
+D) A different system — the gears interact with the table
+
+✅ Why B is right: A collection has the parts without the
+   pattern. That's exactly what remains.
+❌ Why A, C, D are wrong: (1 line each)
+
+🔗 TETHER: This matters because in Phase 4 we'll see that
+   some systems can be re-instantiated — the same pattern,
+   different parts.
+
+📍 CHECKPOINT
+1. What makes a system a system?
+2. Why is a pile of gears not a clock?
+
+(answers at the bottom of Phase 3)</div>
+    </section>
+
+    <!-- APPENDIX A: MNEMETHOS -->
+    <section class="p-section">
+      <h2>Appendix A — On <span class="em">Mnemethos</span></h2>
+      <p>The Greek word for memory. The root of the English <em>mnemonic</em>, <em>amnesia</em>, <em>Mnemosyne</em> — the mother of the Muses.</p>
+      <p><strong>Mnemethos</strong> is the name I gave the craft the protocol is built on. It is not a feature. It is a stance.</p>
+      <p>The Greek root <code>μνήμη</code> (<em>mnēmē</em>) means memory — but not memory as storage. Memory as <em>the act of holding something in mind long enough to act on it</em>. The Greek poets did not think of memory as a room you put things in. They thought of it as a discipline you practiced.</p>
+      <p>The suffix <code>-θεός</code> (<em>-theos</em>) means "of the divine" or "relating to the gods." Mnemethos, then, is something like: <strong>the making-divine of memory</strong> — the craft of treating what you hold in mind as worthy of care.</p>
+      <p>In the AI era, we consume faster than we grasp. We have surface knowledge of everything and deep confidence in nothing. The fundamentals stay black boxes we never open. Mnemethos is the opposite stance. The protocol assumes that anything you don't earn — by being asked, by being forced to choose, by being made to defend — you don't own.</p>
+      <p style="font-style: italic; font-size: 12pt; margin-top: 18pt; color: #0a0a0f;">If you use this protocol and it works — if a concept stays with you six months from now — then Mnemethos did its job. The memory is yours. The divine part is up to you.</p>
+    </section>
+
+    <!-- APPENDIX B: SIGNATURE -->
+    <section class="p-section">
+      <h2>Appendix B — <span class="em">The signature</span></h2>
+      <p>Every document generated by the Zetetic protocol ends with this fixed closing. It is the maker's signature, in the same way every book has a colophon.</p>
+      <div class="signature-block"><span class="acc">────── BEING ZETETIC · SIGNED ──────</span>
+Made by BeingSeight · Driven by Mnemethos
+GitHub: github.com/BeingSeight
+X:      x.com/BeingSeight
+LinkedIn: linkedin.com/in/BeingSeight
+Email:  BeingSeight@gmail.com
+
+A personal note to whoever is reading this: you chose to learn
+something the slow way — by being asked, not by being told. Most
+people don't. That choice is the only thing that compounds. The
+syllabus will fade. The model will be retrained. The links above
+might move. But the discipline you just practiced — staying with a
+question until you can rebuild its answer from a single seed — that
+discipline is yours. It transfers. Use it again.
+
+If this document helped you, send the protocol to one person who
+would actually use it. That's how Mnemethos works — one mind at a
+time.
+
+Welcome to the long road. Stay curious. — BeingSeight
+<span class="acc">────── END SIGNATURE ──────</span></div>
+    </section>
+
+  </div>
+
+  <script src="assets/prompts.js"></script>
+  <script>
+    document.getElementById('thread-prompt').textContent  = window.BZ_PROMPTS.thread;
+    document.getElementById('sift-prompt').textContent    = window.BZ_PROMPTS.sift;
+    document.getElementById('hybrid-prompt').textContent  = window.BZ_PROMPTS.hybrid;
+  </script>
+</body>
+</html>

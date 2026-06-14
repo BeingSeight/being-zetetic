@@ -6,17 +6,17 @@
   <title>JavaScript Closures — A Being Zetetic example · Thread mode</title>
   <meta name="description" content="A complete Zetetic Thread output on JavaScript closures, built one question at a time." />
   <meta name="theme-color" content="#07151a" />
-  <link rel="canonical" href="https://beingzetetic.com/examples/javascript-closures" />
+  <link rel="canonical" href="https://{{SITE_URL}}/examples/javascript-closures" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://beingzetetic.com/examples/javascript-closures" />
+  <meta property="og:url" content="https://{{SITE_URL}}/examples/javascript-closures" />
   <meta property="og:title" content="JavaScript Closures — A Being Zetetic example · Thread mode" />
   <meta property="og:description" content="A complete Zetetic Thread output on JavaScript closures, built one question at a time." />
-  <meta property="og:image" content="https://beingzetetic.com/assets/og-card.png" />
+  <meta property="og:image" content="https://{{SITE_URL}}/assets/og-card.png" />
   <meta property="og:site_name" content="Being Zetetic" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="JavaScript Closures — A Being Zetetic example" />
   <meta name="twitter:description" content="A complete Zetetic Thread output on JavaScript closures." />
-  <meta name="twitter:image" content="https://beingzetetic.com/assets/og-card.png" />
+  <meta name="twitter:image" content="https://{{SITE_URL}}/assets/og-card.png" />
   <meta name="twitter:creator" content="@BeingSeight" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
@@ -52,187 +52,153 @@
 
     <section class="content">
       <div class="wrap prose">
-        <div class="example">─── PHASE 1 ───
+        <div class="example">---
+title: "What is a Closure?"
+author: "Generated via Being Zetetic · Zetetic Thread"
+date: "2026-06-15"
+geometry: margin=2.2cm
+fontsize: 11pt
+---
 
-❓ What is a function, in the most basic sense?
+# What is a JavaScript Closure?
 
-→ A function is a named sequence of instructions that can
-   be invoked (called) any number of times, with different
-   inputs, and may return a value.
+> *The most-feared concept in JS, asked and answered. From
+> "what is a function" to "why does a closure survive".*
 
-→ The word <span class="acc">function</span> comes from Latin
-   <span class="acc">functio</span> — "a performing, an execution". A
-   function is something that performs when called. The
-   inputs are the <span class="acc">arguments</span>. The output is the
-   <span class="acc">return value</span>. The list of instructions
-   inside is the <span class="acc">body</span>.
+---
 
-Think of a function as a recipe. The arguments are the
-ingredients. The body is the steps. The return value is the
-finished dish. You can run the same recipe with different
-ingredients and get different dishes.
+## 📖 Overview
 
-➜ NEXT QUESTION: "When a function runs, where do its
-   arguments and local variables live?"
+This document walks you, one question at a time, from the most basic idea of a function all the way to why a closure can outlive the function that created it. By the end, you should be able to explain closures to a senior engineer in three sentences, and rebuild the concept from scratch six months from now.
 
-─── PHASE 2 ───
+---
 
-❓ Where do a function's variables live while it runs?
+## 🧭 Map
 
-→ In a region of memory called a <span class="acc">stack frame</span>.
+- **Phase 1.** What is a function, in the most basic sense?
+- **Phase 2.** Where do a function's variables live while it runs?
+- **Phase 3.** What happens to a variable that an inner function uses after the outer function has returned?
+- **Phase 4.** How does JavaScript know to keep a variable alive?
+- **Phase 5.** Where do closures live in memory?
+- **Phase 6.** Can closures cause memory leaks?
+- **Phase 7.** What are closures actually good for?
 
-→ A stack frame is created the moment a function is called
-   and destroyed the moment it returns. The frame holds all
-   the function's local variables, plus the arguments it
-   was called with. When the function returns, the frame
-   is gone — and so are all the variables it contained.
+---
 
-The name "stack" comes from the data structure: each new
-function call pushes a new frame on top, and when a function
-returns, its frame is popped off. Last in, first out.
+## 🧵 The Thread
 
-Think of a stack of plates. Each plate is a function call.
-When the function finishes, you take its plate off the stack
-and throw it away.
+### ❓ Phase 1 — Functions
 
-➜ NEXT QUESTION: "If the frame is destroyed when the function
-   returns, what happens to a variable that an inner function
-   tries to use after the outer function has already returned?"
+> What is a function, in the most basic sense?
 
-─── PHASE 3 ───
+**Answer.** A function is a named sequence of instructions that can be invoked any number of times, with different inputs, and may return a value.
 
-❓ What happens to a variable that an inner function uses
-   after the outer function has returned?
+**Why this matters.** The word *function* comes from Latin *functio* — "a performing, an execution." A function is something that performs when called. The inputs are the *arguments*. The output is the *return value*. The list of instructions inside is the *body*.
 
-→ Normally, it would be gone. But if the inner function
-   still holds a reference to that variable, the variable
-   is <em>not</em> destroyed. It survives. That surviving
-   variable-and-function pair is a <span class="acc">closure</span>.
+➡️ **Next question.** When a function runs, where do its arguments and local variables live?
 
-→ JavaScript does this because, unlike C or Java, it does
-   not destroy local variables the moment their function
-   returns. It only destroys them when no function can
-   reach them anymore. As long as one function still
-   references a variable, that variable lives.
+---
 
-The word <span class="acc">closure</span> means "closed over" — the
-inner function "closes over" the outer variables it
-references, carrying them with it like a backpack.
+### ❓ Phase 2 — Stack frames
 
-➜ NEXT QUESTION: "If the inner function is the only thing
-   still holding a reference to the outer variable, how
-   does the program know to keep the variable alive?"
+> Where do a function's variables live while it runs?
 
-─── PHASE 4 ───
+**Answer.** In a region of memory called a *stack frame*.
 
-❓ How does JavaScript know to keep a variable alive?
+**Why this matters.** A stack frame is created the moment a function is called and destroyed the moment it returns. The frame holds all the function's local variables, plus the arguments it was called with. Think of a stack of plates: each new function call pushes a new plate; when the function finishes, you take its plate off the stack and throw it away.
 
-→ By <span class="acc">reachability</span>. The JavaScript engine
-   constantly asks: "Starting from the root (the global
-   object, the current call stack), which values can I
-   reach?" Any value that can be reached is kept alive.
-   Any value that cannot be reached is collected as garbage.
+➡️ **Next question.** If the frame is destroyed when the function returns, what happens to a variable that an inner function tries to use after the outer function has already returned?
 
-→ The inner function is reachable (someone has a reference
-   to it). The variable is reachable <em>through</em> the
-   inner function (the inner function's code references
-   it). So the variable is reachable. So it stays in memory.
+---
 
-Think of the engine as a janitor with a flashlight. Every
-few seconds, the janitor walks the whole program starting
-from the roots. Anything the flashlight touches stays. The
-rest gets thrown out.
+### ❓ Phase 3 — Survival
 
-➜ NEXT QUESTION: "If the inner function and the variable
-   are both still alive, where do they live? On the stack
-   or somewhere else?"
+> What happens to a variable that an inner function uses after the outer function has returned?
 
-─── PHASE 5 ───
+**Answer.** Normally, it would be gone. But if the inner function still holds a reference to that variable, the variable is *not* destroyed. It survives. That surviving variable-and-function pair is a *closure*.
 
-❓ Where do closures live in memory?
+**Why this matters.** The word *closure* means "closed over" — the inner function "closes over" the outer variables it references, carrying them with it like a backpack.
 
-→ On the <span class="acc">heap</span>, not the stack.
+➡️ **Next question.** If the inner function is the only thing still holding a reference to the outer variable, how does the program know to keep the variable alive?
 
-→ The stack is for short-lived things tied to a function
-   call. Closures can outlive the function that created them,
-   so they cannot live on the stack — the stack frame is
-   gone. Instead, the engine allocates the closure's
-   "backpack" (the captured variables) on the heap, where
-   it can persist as long as something still references it.
+---
 
-The heap is the long-term parking lot of memory. The stack
-is the workbench. Closures, because they outlive their
-creator, belong on the parking lot.
+### ❓ Phase 4 — Reachability
 
-➜ NEXT QUESTION: "If a closure can keep a variable alive
-   forever, can that cause problems — like a program that
-   keeps using more and more memory?"
+> How does JavaScript know to keep a variable alive?
 
-─── PHASE 6 ───
+**Answer.** By *reachability*. The JavaScript engine constantly asks: "Starting from the root, which values can I reach?" Any value that can be reached is kept alive. Any value that cannot be reached is collected as garbage.
 
-❓ Can closures cause memory leaks?
+**Why this matters.** Think of the engine as a janitor with a flashlight. Every few seconds, the janitor walks the whole program starting from the roots. Anything the flashlight touches stays. The rest gets thrown out.
 
-→ Yes, if you accidentally keep a reference to a large
-   object that should have been collected.
+➡️ **Next question.** If the inner function and the variable are both still alive, where do they live? On the stack or somewhere else?
 
-→ A classic example: putting event listeners on a button
-   inside a function that creates a closure capturing a
-   large array. The button still has the listener. The
-   listener still references the closure. The closure
-   still references the array. The array never gets
-   collected, even after the user navigates away.
+---
 
-The fix is always the same: break the chain. Remove the
-listener. Set the reference to null. Anything that lets
-the janitor's flashlight lose sight of the value.
+### ❓ Phase 5 — The heap
 
-➜ NEXT QUESTION: "Beyond the memory question, why are
-   closures useful — what can you do with them that you
-   couldn't do before?"
+> Where do closures live in memory?
 
-─── PHASE 7 ───
+**Answer.** On the *heap*, not the stack.
 
-❓ What are closures actually good for?
+**Why this matters.** The stack is for short-lived things tied to a function call. Closures can outlive the function that created them, so they cannot live on the stack — the stack frame is gone. Instead, the engine allocates the closure's "backpack" on the heap, where it can persist as long as something still references it.
 
-→ Three things, in order of how often you'll use them:
+➡️ **Next question.** If a closure can keep a variable alive forever, can that cause problems — like a program that keeps using more and more memory?
 
-   1. <span class="acc">Data privacy</span>. A function can return
-      another function that has access to variables nobody
-      else can see. This is how you build "private"
-      variables in JavaScript.
+---
 
-   2. <span class="acc">Partial application</span>. A function can
-      return a new function with some arguments already
-      filled in. This is how libraries like Lodash let you
-      write <code>_.partial(fn, a)</code>.
+### ❓ Phase 6 — Memory leaks
 
-   3. <span class="acc">Callbacks that remember</span>. A function
-      passed to <code>setTimeout</code> or <code>addEventListener</code>
-      can remember variables from where it was created, not
-      just where it's called.
+> Can closures cause memory leaks?
 
-The deep answer: closures let you carry state with behavior.
-A closure is a function plus the environment it was born in.
-That combination is what makes functional programming possible
-in JavaScript.
+**Answer.** Yes, if you accidentally keep a reference to a large object that should have been collected.
 
-─── CHECKPOINT ───
+**Why this matters.** A classic example: putting event listeners on a button inside a function that creates a closure capturing a large array. The button still has the listener. The listener still references the closure. The closure still references the array. The array never gets collected, even after the user navigates away.
+
+➡️ **Next question.** Beyond the memory question, why are closures useful — what can you do with them that you couldn't do before?
+
+---
+
+### ❓ Phase 7 — Why closures matter
+
+> What are closures actually good for?
+
+**Answer.** Three things, in order of how often you'll use them: (1) *Data privacy* — a function can return another function that has access to variables nobody else can see. (2) *Partial application* — a function can return a new function with some arguments already filled in. (3) *Callbacks that remember* — a function passed to `setTimeout` or `addEventListener` can remember variables from where it was created.
+
+**Why this matters.** Closures let you carry state with behavior. A closure is a function plus the environment it was born in. That combination is what makes functional programming possible in JavaScript.
+
+---
+
+## 🧠 Concept Index
+
+- **Function** — A named sequence of instructions that can be invoked with different inputs and may return a value. (From Latin *functio*, "a performing, an execution.")
+- **Stack frame** — A region of memory created when a function is called and destroyed when it returns. Holds the function's local variables and arguments.
+- **Closure** — A function plus the variables it captured from where it was created. The function "closes over" the variables, carrying them with it.
+- **Reachability** — The rule the JavaScript engine uses to decide which values to keep alive. Any value reachable from the root stays; the rest is garbage.
+- **Heap** — The long-term region of memory. The stack is for short-lived function-call data; the heap is for data that may outlive the function that created it.
+- **Memory leak** — A value that should have been garbage-collected but isn't, because something still references it (often through a chain of closures).
+
+---
+
+## ✅ Final Checkpoint
+
 1. In one sentence, what is a closure?
 2. Why does the inner function's reference keep the variable alive?
 3. What's the difference between the stack and the heap, in the context of closures?
 4. Name two practical uses of closures.
+5. How would you fix a memory leak caused by a closure?
 
-────── ANSWERS ──────
-1. A closure is a function plus the variables it captured from
-   where it was created — a function with a "backpack".
-2. The JavaScript engine keeps any value reachable from the
-   roots alive. If the inner function is reachable, and it
-   references the variable, the variable is reachable too.
-3. The stack is for short-lived function-call data. Closures
-   can outlive their creating function, so they live on the
-   heap, which is for long-lived data.
-4. Data privacy, partial application, callbacks that remember
-   state, and event handlers that retain context.</div>
+---
+
+## 📚 Further Paths
+
+- **Prototypal inheritance** — *Builds on Phase 1. How JavaScript objects share behavior, and why it's also based on the "function with a backpack" idea.*
+- **Promises and async/await** — *Builds on Phase 7. Why async functions are fundamentally a special case of "callbacks that remember."*
+- **Functional programming in JS** — *Builds on all phases. The big ideas of immutability, pure functions, and composition — all of which lean on closures.*
+
+---
+
+*Generated by the Being Zetetic protocol · Driven by Mnemethos*</div>
 
         <h2>Try it on your own syllabus</h2>
         <p>This output was generated using the Zetetic Thread prompt. Use it on any topic — algorithms, philosophy, design patterns, anything that benefits from being asked into existence one question at a time.</p>

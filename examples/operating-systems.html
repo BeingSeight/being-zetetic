@@ -6,17 +6,17 @@
   <title>What is an OS? — A Being Zetetic example · Thread mode</title>
   <meta name="description" content="A complete Zetetic Thread output on operating systems. Every concept arises as a question from the previous one." />
   <meta name="theme-color" content="#07151a" />
-  <link rel="canonical" href="https://beingzetetic.com/examples/operating-systems" />
+  <link rel="canonical" href="https://{{SITE_URL}}/examples/operating-systems" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://beingzetetic.com/examples/operating-systems" />
+  <meta property="og:url" content="https://{{SITE_URL}}/examples/operating-systems" />
   <meta property="og:title" content="What is an OS? — A Being Zetetic example · Thread mode" />
   <meta property="og:description" content="A complete Zetetic Thread output on operating systems." />
-  <meta property="og:image" content="https://beingzetetic.com/assets/og-card.png" />
+  <meta property="og:image" content="https://{{SITE_URL}}/assets/og-card.png" />
   <meta property="og:site_name" content="Being Zetetic" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="What is an OS? — A Being Zetetic example · Thread mode" />
   <meta name="twitter:description" content="A complete Zetetic Thread output on operating systems." />
-  <meta name="twitter:image" content="https://beingzetetic.com/assets/og-card.png" />
+  <meta name="twitter:image" content="https://{{SITE_URL}}/assets/og-card.png" />
   <meta name="twitter:creator" content="@BeingSeight" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
@@ -52,174 +52,154 @@
 
     <section class="content">
       <div class="wrap prose">
-        <div class="example">─── PHASE 1 ───
+        <div class="example">---
+title: "What is an Operating System?"
+author: "Generated via Being Zetetic · Zetetic Thread"
+date: "2026-06-15"
+geometry: margin=2.2cm
+fontsize: 11pt
+---
 
-❓ What is the most basic thing a computer does?
+# What is an Operating System?
 
-→ It executes instructions, one after another, with absolute precision.
+> *A complete Zetetic Thread on operating systems. Every
+> concept is asked into existence — never told.*
 
-→ A "computer" in the strict sense is any device that takes a
-   list of operations and performs them in order. The word
-   <span class="acc">computer</span> comes from Latin <span class="acc">computare</span> — "to
-   sum up, to count". Originally a human job.
+---
 
-Think of a computer as a very fast, very literal reader. It does
-exactly what the next instruction says, and nothing else. If the
-next instruction is wrong, the computer does the wrong thing
-faithfully.
+## 📖 Overview
 
-➜ NEXT QUESTION: "If the computer just reads instructions, where
-   do those instructions come from — and who decides what to read
-   next?"
+This document walks you, one question at a time, from "what is a computer" to "how does the kernel schedule processes." After working through it, you should be able to rebuild the entire mental model of an operating system from a single seed question — and explain to a non-technical friend why a computer without an OS would be a disaster.
 
-─── PHASE 2 ───
+---
 
-❓ Where do the instructions come from?
+## 🧭 Map
 
-→ From memory. A computer has two kinds: the programs (the
-   instructions themselves) and the data (what the instructions
-   operate on). Both live in memory.
+- **Phase 1.** What is the most basic thing a computer does?
+- **Phase 2.** Where do the instructions come from?
+- **Phase 3.** Who decides what runs, and when?
+- **Phase 4.** Who loads the OS in the first place?
+- **Phase 5.** Why can't programs talk to hardware directly?
+- **Phase 6.** How is the OS organized inside?
+- **Phase 7.** How does the kernel share the CPU?
 
-→ Memory is the computer's working surface. Everything the
-   computer knows how to do, every file you have open, every
-   webpage you visit, every line of code — all of it is, at
-   some moment, sitting in memory as bytes.
+---
 
-Think of memory as the desk where the work happens. The CPU is
-the hand that picks up the next item. Without the desk, the hand
-has nowhere to put anything.
+## 🧵 The Thread
 
-➜ NEXT QUESTION: "If the CPU just reads the next instruction and
-   does it, and the next instruction is in memory, then who
-   decides which instructions to put in memory, in what order?"
+### ❓ Phase 1 — The first thing
 
-─── PHASE 3 ───
+> What is the most basic thing a computer does?
 
-❓ Who decides what runs, and when?
+**Answer.** It executes instructions, one after another, with absolute precision.
 
-→ The operating system.
+**Why this matters.** Every other concept in this document — memory, programs, the OS, the kernel — is an answer to the question *"where do those instructions come from, and who decides what to read next?"*
 
-→ The OS is a program that runs continuously, and its job is
-   to manage every other program. It decides which program
-   gets the CPU next, which one gets which piece of memory,
-   which one gets to read from the disk, which one gets to
-   talk to the network.
+➡️ **Next question.** If the computer just reads instructions, where do those instructions come from — and who decides what to read next?
 
-The word <span class="acc">operating</span> is the key. The OS doesn't
-just "run" — it operates, the way a manager operates a
-kitchen: scheduling cooks, distributing ingredients, making
-sure no two cooks burn down the same stove.
+---
 
-➜ NEXT QUESTION: "If the OS is itself a program, who decides
-   that the OS gets to run, and not some other program?"
+### ❓ Phase 2 — Memory
 
-─── PHASE 4 ───
+> Where do the instructions come from?
 
-❓ Who loads the OS in the first place?
+**Answer.** From memory. A computer has two kinds: the programs (the instructions themselves) and the data (what the instructions operate on). Both live in memory.
 
-→ A small program called the bootloader, which lives in a
-   special, protected region of the disk that the CPU knows
-   to look at the moment it powers on.
+**Why this matters.** Memory is the desk where the work happens. The CPU is the hand that picks up the next item. Without the desk, the hand has nowhere to put anything.
 
-→ The chain is: power on → CPU looks at a fixed address →
-   finds the bootloader → bootloader loads the OS →
-   OS takes over.
+➡️ **Next question.** If the CPU just reads the next instruction and does it, and the next instruction is in memory, then who decides which instructions to put in memory, in what order?
 
-The bootloader is tiny — often under a megabyte. It only has
-one job: find the OS on the disk, load it into memory, and
-hand control to it. After that, the bootloader is gone, and
-the OS owns the machine.
+---
 
-➜ NEXT QUESTION: "Once the OS is running, programs want to
-   use the hardware — but they can't just talk to the disk
-   or the network directly. Why not?"
+### ❓ Phase 3 — The OS
 
-─── PHASE 5 ───
+> Who decides what runs, and when?
 
-❓ Why can't programs talk to hardware directly?
+**Answer.** The operating system.
 
-→ Three reasons. First, two programs might try to use the
-   same hardware at once. Second, a buggy program could
-   crash the entire machine. Third, you'd have to rewrite
-   every program for every kind of disk, network card, and
-   printer that exists.
+**Why this matters.** The word *operating* is the key. The OS doesn't just "run" — it operates, the way a manager operates a kitchen: scheduling cooks, distributing ingredients, making sure no two cooks burn down the same stove.
 
-→ The OS solves all three by sitting between programs and
-   hardware. Programs make a <span class="acc">system call</span> — a
-   polite, well-defined request — and the OS arbitrates.
+➡️ **Next question.** If the OS is itself a program, who decides that the OS gets to run, and not some other program?
 
-The system call is the handshake. The program says "I'd like
-to read this file, please." The OS says "Yes, here's the
-data" or "No, you don't have permission" or "Wait, another
-program is reading it first."
+---
 
-➜ NEXT QUESTION: "If the OS is the only thing that talks to
-   hardware, what does it look like inside — how is it
-   organized?"
+### ❓ Phase 4 — The bootloader
 
-─── PHASE 6 ───
+> Who loads the OS in the first place?
 
-❓ How is the OS organized inside?
+**Answer.** A small program called the bootloader, which lives in a special, protected region of the disk that the CPU knows to look at the moment it powers on.
 
-→ In two big halves. The <span class="acc">kernel</span> runs with full
-   hardware access and is the only part allowed to talk
-   directly to devices. Everything else — the file browser,
-   the settings panel, the command line — is just a regular
-   program that asks the kernel to do things.
+**Why this matters.** The chain is: power on → CPU looks at a fixed address → finds the bootloader → bootloader loads the OS → OS takes over. The bootloader is the only program that ever starts before the OS exists.
 
-→ The kernel is the only part of the OS that, if it crashes,
-   takes the whole machine down. Everything else is just a
-   program. You can close them. The kernel is always there.
+➡️ **Next question.** Once the OS is running, programs want to use the hardware — but they can't just talk to the disk or the network directly. Why not?
 
-Think of the kernel as the manager in the kitchen — always
-present, always arbitrating, never leaving. The chefs come
-and go.
+---
 
-➜ NEXT QUESTION: "When multiple programs want the CPU at
-   the same time, how does the kernel decide who runs?"
+### ❓ Phase 5 — System calls
 
-─── PHASE 7 ───
+> Why can't programs talk to hardware directly?
 
-❓ How does the kernel share the CPU?
+**Answer.** Three reasons. First, two programs might try to use the same hardware at once. Second, a buggy program could crash the entire machine. Third, you'd have to rewrite every program for every kind of disk, network card, and printer that exists.
 
-→ By pretending. The kernel rapidly switches the CPU between
-   programs — thousands of times per second — so that each
-   one appears to have the machine to itself.
+**Why this matters.** The OS solves all three by sitting between programs and hardware. Programs make a *system call* — a polite, well-defined request — and the OS arbitrates.
 
-→ This trick is called <span class="acc">preemptive multitasking</span>.
-   The kernel keeps a queue of "ready to run" programs. It
-   gives each one a small slice of time (often 10ms), then
-   yanks the CPU away and gives it to the next.
+➡️ **Next question.** If the OS is the only thing that talks to hardware, what does it look like inside — how is it organized?
 
-The illusion of simultaneity is just fast switching. Like
-a film projector: 24 still frames per second, and your brain
-sees motion. 1000 context switches per second, and your
-programs feel like they're running in parallel.
+---
 
-➜ NEXT QUESTION: "If the kernel is constantly switching
-   between programs, how does each program remember where
-   it was when it gets the CPU back?"
+### ❓ Phase 6 — Kernel vs user space
 
-─── CHECKPOINT ───
+> How is the OS organized inside?
+
+**Answer.** In two big halves. The *kernel* runs with full hardware access and is the only part allowed to talk directly to devices. Everything else — the file browser, the settings panel, the command line — is just a regular program that asks the kernel to do things.
+
+**Why this matters.** The kernel is the only part of the OS that, if it crashes, takes the whole machine down. Everything else is just a program. You can close them. The kernel is always there.
+
+➡️ **Next question.** When multiple programs want the CPU at the same time, how does the kernel decide who runs?
+
+---
+
+### ❓ Phase 7 — Multitasking
+
+> How does the kernel share the CPU?
+
+**Answer.** By pretending. The kernel rapidly switches the CPU between programs — thousands of times per second — so that each one appears to have the machine to itself.
+
+**Why this matters.** This trick is called *preemptive multitasking*. The illusion of simultaneity is just fast switching. Like a film projector: 24 still frames per second, and your brain sees motion. 1000 context switches per second, and your programs feel like they're running in parallel.
+
+---
+
+## 🧠 Concept Index
+
+- **Computer** — A device that takes a list of operations and performs them in order, with absolute precision. (From Latin *computare*, "to sum up, to count.")
+- **Memory** — The working surface of a computer. Everything the computer knows how to do, every file, every line of code — all of it is, at some moment, sitting in memory as bytes.
+- **Operating system** — A program that runs continuously and manages every other program: deciding which gets the CPU, which gets which memory, which gets the disk.
+- **Bootloader** — A tiny program in a protected region of the disk that the CPU finds on power-on, whose only job is to load the OS into memory.
+- **System call** — A program's polite, well-defined request to the kernel to do something with hardware.
+- **Kernel** — The only part of the OS that runs with full hardware access; the only part that may talk directly to devices.
+- **Preemptive multitasking** — The kernel's trick of rapidly switching the CPU between programs so each appears to run continuously.
+
+---
+
+## ✅ Final Checkpoint
+
 1. In one sentence, what is the kernel's job?
 2. Why is the bootloader so much smaller than the OS?
 3. What is a system call, and why does it exist?
 4. In what sense is "multitasking" an illusion?
+5. Why does the kernel sit between programs and hardware instead of letting them talk directly?
 
-(Answers are below — try to answer before reading.)
+---
 
-────── ANSWERS ──────
-1. The kernel is the only part of the OS that talks directly
-   to hardware and arbitrates between programs.
-2. The bootloader only has to find and load the OS. Everything
-   else — drivers, services, user interfaces — is part of
-   the OS itself.
-3. A system call is a program's polite, well-defined request
-   to the kernel to do something with hardware. It exists so
-   the kernel can arbitrate and protect the machine.
-4. Multitasking is the kernel rapidly switching the CPU
-   between programs so fast that each one appears to run
-   continuously.</div>
+## 📚 Further Paths
+
+- **Virtual memory** — *Builds on Phase 2. How the kernel gives every program the illusion of having all the memory to itself.*
+- **Processes and threads** — *Builds on Phase 7. What "a running program" actually is, and how a single program can do many things at once.*
+- **Filesystems** — *Builds on Phase 4. How the OS turns raw disk blocks into the files and folders you actually see.*
+
+---
+
+*Generated by the Being Zetetic protocol · Driven by Mnemethos*</div>
 
         <h2>Try it on your own syllabus</h2>
         <p>This output was generated using the Zetetic Thread prompt. Copy it, paste it into Claude, ChatGPT, or Gemini with your own syllabus, and the protocol will produce the same shape of document for any topic.</p>
