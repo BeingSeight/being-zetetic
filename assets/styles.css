@@ -1,20 +1,20 @@
 /* ─── BEING ZETETIC · GLOBAL STYLES · TURQUOISE ─── */
 
 :root {
-  --bg: #0a0a0f;            /* deep teal-black */
-  --bg-elev: #0f0f17;
-  --bg-card: #11111a;
-  --border: #1f1f2e;
-  --border-strong: #2a2a3e;
-  --fg: #e8e8f0;
-  --fg-dim: #9a9ab0;
-  --fg-mute: #5a5a72;
-  --acc: #d4a574;           /* turquoise */
-  --acc-bright: #e6b888;    /* hover/bright */
-  --acc-dim: #8a6f4d;
-  --acc-glow: rgba(212, 165, 116, 0.15);
-  --link: #e8e8f0;
-  --link-hover: #d4a574;
+  --bg: #07151a;            /* deep teal-black */
+  --bg-elev: #0c1f25;
+  --bg-card: #0f242c;
+  --border: #163038;
+  --border-strong: #1f4250;
+  --fg: #eaf6f7;
+  --fg-dim: #9ab6bb;
+  --fg-mute: #5b7a7f;
+  --acc: #3ad6c6;           /* turquoise */
+  --acc-bright: #6cf0e0;    /* hover/bright */
+  --acc-dim: #1a8a7e;
+  --acc-glow: rgba(58, 214, 198, 0.18);
+  --link: #eaf6f7;
+  --link-hover: #3ad6c6;
   --serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
   --mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -42,7 +42,7 @@ body {
   flex-direction: column;
   background:
     radial-gradient(1200px 600px at 80% -10%, var(--acc-glow), transparent 60%),
-    radial-gradient(900px 500px at -10% 30%, rgba(212, 165, 116, 0.04), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(58, 214, 198, 0.07), transparent 60%),
     var(--bg);
 }
 
@@ -84,7 +84,7 @@ main { flex: 1; }
 
 nav.top {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(10, 10, 15, 0.85);
+  background: rgba(7, 21, 26, 0.78);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
@@ -120,7 +120,7 @@ nav.top .cta:hover { background: var(--acc); color: var(--bg); border-color: var
   content: "";
   position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
   width: 800px; height: 800px;
-  background: radial-gradient(circle, rgba(212, 165, 116, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(58, 214, 198, 0.12) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero .eyebrow {
