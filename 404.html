@@ -3,21 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>404 — Page not found · Being Zetetic</title>
+  <title>Loading… · Being Zetetic</title>
+  <meta name="theme-color" content="#07151a" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .spinner { width: 14px; height: 14px; border: 2px solid var(--acc-dim); border-top-color: var(--acc); border-radius: 50%; display: inline-block; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 8px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
 </head>
 <body>
   <main>
     <section class="hero">
       <div class="wrap text-center">
-        <div class="eyebrow">— 404 —</div>
-        <h1>That page <span class="em">doesn't exist</span>.</h1>
-        <p class="sub">Or it was never asked. Either way, here's the way back.</p>
-        <a href="index.html" class="btn primary">Return to Being Zetetic <span class="arrow">▸</span></a>
+        <div class="eyebrow">— Routing —</div>
+        <h1>Finding the <span class="em">right path</span>.</h1>
+        <p class="sub"><span class="spinner"></span><span id="status">Locating the page…</span></p>
+        <p class="dim" style="font-family: var(--mono); font-size: 0.85rem; margin-top: 16px;" id="path"></p>
+        <p class="dim" id="fallback" style="display: none; margin-top: 24px;">
+          Something went wrong. <a href="index.html" class="acc">Go home →</a>
+        </p>
       </div>
     </section>
   </main>
+  <script>
+    (function () {
+      var path = location.pathname;
+      document.getElementById('path').textContent = path;
+
+      // Map clean URLs → .html files
+      var map = {
+        '/':                'index.html',
+        '/thread':          'thread.html',
+        '/sift':            'sift.html',
+        '/hybrid':          'hybrid.html',
+        '/mnemethos':       'mnemethos.html',
+        '/machine':         'machine.html',
+        '/machine/thread':  'machine-thread.html',
+        '/machine/sift':    'machine-sift.html',
+        '/machine/hybrid':  'machine-hybrid.html',
+        '/examples':                   'examples/index.html',
+        '/examples/operating-systems': 'examples/operating-systems.html',
+        '/examples/javascript-closures': 'examples/javascript-closures.html',
+        '/examples/blockchain-basics':  'examples/blockchain-basics.html',
+      };
+
+      // Strip trailing slash for matching
+      var key = path.replace(/\/+$/, '') || '/';
+      var target = map[key];
+
+      if (target) {
+        document.getElementById('status').textContent = '→ ' + target;
+        // Use replace so the back button doesn't loop
+        location.replace(target);
+      } else {
+        // Truly unknown — show a proper 404
+        document.querySelector('.eyebrow').textContent = '— 404 —';
+        document.querySelector('h1').innerHTML = 'That page <span class="em">doesn\'t exist</span>.';
+        document.querySelector('.sub').innerHTML = 'Or it was never asked. Either way, here\'s the way back.';
+        document.getElementById('status').textContent = '';
+        document.getElementById('fallback').innerHTML =
+          '<a href="index.html" class="btn primary">Return to Being Zetetic <span class="arrow">▸</span></a>';
+        document.getElementById('fallback').style.display = 'block';
+      }
+    })();
+  </script>
 </body>
 </html>

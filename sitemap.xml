@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://beingzetetic.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://beingzetetic.com/thread</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://beingzetetic.com/sift</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://beingzetetic.com/hybrid</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://beingzetetic.com/mnemethos</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beingzetetic.com/machine</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beingzetetic.com/machine/thread</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://beingzetetic.com/machine/sift</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://beingzetetic.com/machine/hybrid</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://beingzetetic.com/examples</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://beingzetetic.com/examples/operating-systems</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beingzetetic.com/examples/javascript-closures</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beingzetetic.com/examples/blockchain-basics</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

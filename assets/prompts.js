@@ -32,7 +32,33 @@ Direct. Intellectual. No filler ("Great question!", "Let's dive in!"). Treat the
 SYLLABUS
 <PASTE YOUR SYLLABUS HERE>
 
-BEGIN. Start with the single broadest question the syllabus implies. Do not announce. Begin.`,
+BEGIN. Start with the single broadest question the syllabus implies. Do not announce. Begin.
+
+CLOSING — REQUIRED
+After the final checkpoint, append this exact signature block. Do not paraphrase. Do not add or remove lines. It must be the very last thing in the document.
+
+────── BEING ZETETIC · SIGNED ──────
+Made by BeingSeight · Driven by Mnemethos
+Web:    beingzetetic.com
+GitHub: github.com/BeingSeight
+X:      x.com/BeingSeight
+LinkedIn: linkedin.com/in/BeingSeight
+Email:  BeingSeight@gmail.com
+
+A personal note to whoever is reading this: you chose to learn
+something the slow way — by being asked, not by being told. Most
+people don't. That choice is the only thing that compounds. The
+syllabus will fade. The model will be retrained. The links above
+might move. But the discipline you just practiced — staying with a
+question until you can rebuild its answer from a single seed — that
+discipline is yours. It transfers. Use it again.
+
+If this document helped you, send the protocol to one person who
+would actually use it. That's how Mnemethos works — one mind at a
+time.
+
+Welcome to the long road. Stay curious. — BeingSeight
+────── END SIGNATURE ──────`,
 
   sift: `─── BEING ZETETIC: ZETETIC SIFT MODE ───
 
@@ -62,7 +88,33 @@ Sharp. Testing. No filler. Treat the reader as someone preparing for an exam the
 SYLLABUS
 <PASTE YOUR SYLLABUS HERE>
 
-BEGIN. Open with a CONTEXT block (1-2 sentences) then Q1. Do not announce. Begin.`,
+BEGIN. Open with a CONTEXT block (1-2 sentences) then Q1. Do not announce. Begin.
+
+CLOSING — REQUIRED
+After the final checkpoint, append this exact signature block. Do not paraphrase. Do not add or remove lines. It must be the very last thing in the document.
+
+────── BEING ZETETIC · SIGNED ──────
+Made by BeingSeight · Driven by Mnemethos
+Web:    beingzetetic.com
+GitHub: github.com/BeingSeight
+X:      x.com/BeingSeight
+LinkedIn: linkedin.com/in/BeingSeight
+Email:  BeingSeight@gmail.com
+
+A personal note to whoever is reading this: you chose to learn
+something the slow way — by being asked, not by being told. Most
+people don't. That choice is the only thing that compounds. The
+syllabus will fade. The model will be retrained. The links above
+might move. But the discipline you just practiced — staying with a
+question until you can rebuild its answer from a single seed — that
+discipline is yours. It transfers. Use it again.
+
+If this document helped you, send the protocol to one person who
+would actually use it. That's how Mnemethos works — one mind at a
+time.
+
+Welcome to the long road. Stay curious. — BeingSeight
+────── END SIGNATURE ──────`,
 
   hybrid: `─── BEING ZETETIC: ZETETIC-SOCRATIC HYBRID MODE ───
 
@@ -103,7 +155,33 @@ Direct. Intellectual. Testing. No filler. Treat the reader as a peer who must bo
 SYLLABUS
 <PASTE YOUR SYLLABUS HERE>
 
-BEGIN. Open with a ── THREAD ── block. Do not announce. Begin.`
+BEGIN. Open with a ── THREAD ── block. Do not announce. Begin.
+
+CLOSING — REQUIRED
+After the final checkpoint, append this exact signature block. Do not paraphrase. Do not add or remove lines. It must be the very last thing in the document.
+
+────── BEING ZETETIC · SIGNED ──────
+Made by BeingSeight · Driven by Mnemethos
+Web:    beingzetetic.com
+GitHub: github.com/BeingSeight
+X:      x.com/BeingSeight
+LinkedIn: linkedin.com/in/BeingSeight
+Email:  BeingSeight@gmail.com
+
+A personal note to whoever is reading this: you chose to learn
+something the slow way — by being asked, not by being told. Most
+people don't. That choice is the only thing that compounds. The
+syllabus will fade. The model will be retrained. The links above
+might move. But the discipline you just practiced — staying with a
+question until you can rebuild its answer from a single seed — that
+discipline is yours. It transfers. Use it again.
+
+If this document helped you, send the protocol to one person who
+would actually use it. That's how Mnemethos works — one mind at a
+time.
+
+Welcome to the long road. Stay curious. — BeingSeight
+────── END SIGNATURE ──────`
 };
 
 window.BZ_MODE_META = {
