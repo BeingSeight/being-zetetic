@@ -20,6 +20,10 @@
         <span class="ic"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 4.5h21a1.5 1.5 0 0 1 1.5 1.5v12a1.5 1.5 0 0 1-1.5 1.5h-21A1.5 1.5 0 0 1 0 18V6a1.5 1.5 0 0 1 1.5-1.5Zm10.5 8.4L3.4 7.2a.9.9 0 0 1 1.18-1.36L12 11.04l7.42-5.2A.9.9 0 0 1 20.6 7.2L12 12.9Zm9.6-7.18a.9.9 0 0 0-1.2 0L12 11.04 3.6 5.72a.9.9 0 1 0-1.2 1.34l9 6.3a.9.9 0 0 0 1.2 0l9-6.3a.9.9 0 0 0 0-1.34Z"/></svg></span>
         Email
       </a>
+      <a href="https://x.com/BeingSeight" target="_blank" rel="noopener" aria-label="X">
+        <span class="ic"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.91l-5.41-6.84L4.4 22H1.14l8.04-9.18L1 2h7.09l4.89 6.27L18.244 2Zm-2.42 18h1.93L7.27 4H5.21l10.61 16Z"/></svg></span>
+        X
+      </a>
     </div>
   </div>
 </section>`,
@@ -40,6 +44,10 @@
       <a href="mailto:BeingSeight@gmail.com" aria-label="Email">
         <span class="ic"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 4.5h21a1.5 1.5 0 0 1 1.5 1.5v12a1.5 1.5 0 0 1-1.5 1.5h-21A1.5 1.5 0 0 1 0 18V6a1.5 1.5 0 0 1 1.5-1.5Zm10.5 8.4L3.4 7.2a.9.9 0 0 1 1.18-1.36L12 11.04l7.42-5.2A.9.9 0 0 1 20.6 7.2L12 12.9Zm9.6-7.18a.9.9 0 0 0-1.2 0L12 11.04 3.6 5.72a.9.9 0 1 0-1.2 1.34l9 6.3a.9.9 0 0 0 1.2 0l9-6.3a.9.9 0 0 0 0-1.34Z"/></svg></span>
         Email
+      </a>
+      <a href="https://x.com/BeingSeight" target="_blank" rel="noopener" aria-label="X">
+        <span class="ic"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.91l-5.41-6.84L4.4 22H1.14l8.04-9.18L1 2h7.09l4.89 6.27L18.244 2Zm-2.42 18h1.93L7.27 4H5.21l10.61 16Z"/></svg></span>
+        X
       </a>
     </div>
   </div>
