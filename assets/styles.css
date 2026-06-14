@@ -444,3 +444,50 @@ footer .links a .ic svg { width: 100%; height: 100%; display: block; fill: curre
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--acc-dim); }
+
+/* ─── COPY BUTTON STATES ─── */
+
+[data-copy] { position: relative; overflow: hidden; }
+
+[data-copy] [data-label] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+[data-copy].is-copied {
+  background: var(--acc) !important;
+  color: var(--bg) !important;
+  border-color: var(--acc) !important;
+  box-shadow: 0 0 0 3px var(--acc-glow), 0 0 24px var(--acc-glow);
+}
+[data-copy].is-copied [data-label] {
+  animation: copyPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-copy].is-error {
+  background: transparent;
+  color: #ff8a7a;
+  border-color: #ff8a7a;
+}
+
+[data-copy] .ripple {
+  position: absolute;
+  inset: 0;
+  background: var(--acc);
+  opacity: 0.35;
+  pointer-events: none;
+  animation: copyRipple 0.65s ease-out forwards;
+}
+
+@keyframes copyPop {
+  0%   { transform: scale(0.6); opacity: 0; }
+  50%  { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1);    opacity: 1; }
+}
+
+@keyframes copyRipple {
+  0%   { transform: scale(0);   opacity: 0.4; border-radius: 50%; }
+  100% { transform: scale(2.2); opacity: 0;   border-radius: 50%; }
+}
