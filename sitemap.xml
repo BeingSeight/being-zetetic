@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://{{SITE_URL}}/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://{{SITE_URL}}/thread</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://{{SITE_URL}}/sift</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://{{SITE_URL}}/hybrid</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://{{SITE_URL}}/mnemethos</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://{{SITE_URL}}/machine</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://{{SITE_URL}}/machine/thread</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://{{SITE_URL}}/machine/sift</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://{{SITE_URL}}/machine/hybrid</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://{{SITE_URL}}/examples</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://{{SITE_URL}}/examples/operating-systems</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://{{SITE_URL}}/examples/javascript-closures</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://{{SITE_URL}}/examples/blockchain-basics</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/thread</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/sift</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/hybrid</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/mnemethos</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/machine</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/machine/thread</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/machine/sift</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/machine/hybrid</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/examples</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/examples/operating-systems</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/examples/javascript-closures</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beingseight.github.io/being-zetetic/examples/blockchain-basics</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

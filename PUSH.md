@@ -45,4 +45,4 @@ After Pages is enabled, your URL is one of:
 - **Project site:** `https://BeingSeight.github.io/being-zetetic/`
 - **User site:** `https://BeingSeight.github.io/` (if you used the special repo name)
 
-Tell me the URL and I'll do a global find-replace in all 74 places where I left a `{{SITE_URL}}` placeholder.
+Tell me the URL and I'll do a global find-replace in all 74 places where I left a `https://beingseight.github.io/being-zetetic` placeholder.

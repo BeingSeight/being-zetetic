@@ -19,8 +19,8 @@
 
   const here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const m = pageMeta[here] || pageMeta['index.html'];
-  const url = 'https://{{SITE_URL}}' + (here === 'index.html' ? '/' : '/' + here);
-  const og  = 'https://{{SITE_URL}}/assets/og-card.png';
+  const url = 'https://beingseight.github.io/being-zetetic' + (here === 'index.html' ? '/' : '/' + here);
+  const og  = 'https://beingseight.github.io/being-zetetic/assets/og-card.png';
 
   function setMeta(attr, key, content) {
     let el = document.head.querySelector(`meta[${attr}="${key}"]`);
