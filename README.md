@@ -1,52 +1,134 @@
-# Being Zetetic
+<div align="center">
 
-> The learning protocol for lifelong mastery of anything.
-> Become the Being that inquires.
+# Ⲍ Being Zetetic
 
-**Live site:** [https://beingseight.github.io/being-zetetic](https://beingseight.github.io/being-zetetic)
-**Made by:** [BeingSeight](https://github.com/BeingSeight) · Driven by Mnemethos
-**Stack:** Static site. Zero backend. Zero build step.
+### The learning protocol for lifelong mastery of anything.
+
+**Zero-to-depth, in 60 seconds.** Pick a mode, copy the prompt, paste into any frontier model, replace the syllabus — and own the concept.
+
+[**🌐 Open the live site →**](https://beingseight.github.io/being-zetetic)
+&nbsp;·&nbsp;
+[**📄 Read an example →**](https://beingseight.github.io/being-zetetic/examples/operating-systems)
+
+![Made by BeingSeight](https://img.shields.io/badge/made%20by-BeingSeight-3ad6c6?style=flat-square)
+![Driven by Mnemethos](https://img.shields.io/badge/driven%20by-Mnemethos-3ad6c6?style=flat-square)
+![License: MIT](https://img.shields.io/badge/license-MIT-3ad6c6?style=flat-square)
+![Static site](https://img.shields.io/badge/stack-static%20site-0c1f25?style=flat-square)
+![Zero tracking](https://img.shields.io/badge/tracking-none-0c1f25?style=flat-square)
+
+</div>
 
 ---
 
-## What this is
+## The problem
 
-A static website that hosts a learning protocol in three modes:
+In the AI era, we consume faster but grasp less. We have surface knowledge of everything and deep confidence in nothing. The fundamentals stay black boxes we never open.
 
-- **Zetetic Thread** — pure thought-map. Every concept arises as a question from the previous one.
-- **Zetetic Sift** — MCQ-based stream. One-liner Qs, one-liner whys.
-- **Zetetic-Socratic Hybrid** — Thread + Sift alternating. Build, test, build, test.
+Most learning tools optimize for throughput — engagement, time-on-page, completion rate. They never measure **retention in six months**. They never ask whether you can rebuild the concept from a single seed question.
 
-Plus:
+## The solution
 
-- A **Mnemethos** page explaining the philosophy behind the protocol.
-- A **Machine Hub** with raw prompts designed to be ingested directly by AI agents.
-- **Three pre-generated example documents** (Operating Systems, JavaScript Closures, Blockchain Basics) you can read right now.
+**Being Zetetic** is a protocol that refuses to let you fake understanding. Every concept arises as a question from the previous one. Every term is defined in one sentence. Nothing is assumed. The final checkpoint is the proof of ownership.
 
-The protocol is open. The prompts are public. The site has no tracking cookies, no third-party analytics, no build pipeline.
+It's three prompt-shaped procedures you run against any frontier model (Claude, ChatGPT, Gemini). The AI is a vehicle. The syllabus is the territory. Your mind is the only thing that counts.
+
+---
+
+## Three modes · one syllabus · three depths
+
+| Mode | What it does | Best for |
+| :--- | :---------- | :------- |
+| 🧵 **Zetetic Thread** | Pure thought-map. Every concept arises as a question from the previous one. | Deep first-time understanding |
+| 🧪 **Zetetic Sift** | MCQ stream. One-liner questions, 4 plausible options, one-liner explanations. | Active recall & exam prep |
+| 🔄 **Zetetic-Socratic Hybrid** | Thread + Sift, alternating. Build, test, build, test. | Complete mastery with retention |
+
+[**🧵 Open Thread →**](https://beingseight.github.io/being-zetetic/thread)
+&nbsp;·&nbsp;
+[**🧪 Open Sift →**](https://beingseight.github.io/being-zetetic/sift)
+&nbsp;·&nbsp;
+[**🔄 Open Hybrid →**](https://beingseight.github.io/being-zetetic/hybrid)
+
+---
+
+## ⚡ Try it now (60 seconds)
+
+1. **Pick a mode** → [Thread](https://beingseight.github.io/being-zetetic/thread), [Sift](https://beingseight.github.io/being-zetetic/sift), or [Hybrid](https://beingseight.github.io/being-zetetic/hybrid)
+2. **Click `Copy Prompt`** on the page
+3. **Paste into** Claude, ChatGPT, or Gemini
+4. **Replace** `<PASTE YOUR SYLLABUS HERE>` with any topic you want to learn
+5. **Read the generated document** — export to PDF, keep it forever
+
+That's it. No signup, no install, no account, no tracking.
+
+> **Don't know what to learn first?** Three complete Zetetic documents are pre-generated and ready to read:
+> - [What is an Operating System?](https://beingseight.github.io/being-zetetic/examples/operating-systems) — *~12 min read*
+> - [JavaScript Closures](https://beingseight.github.io/being-zetetic/examples/javascript-closures) — *~10 min read*
+> - [Blockchain Basics](https://beingseight.github.io/being-zetetic/examples/blockchain-basics) — *~11 min read*
+
+---
+
+## How it compares
+
+| | **Being Zetetic** | Anki | Obsidian | Plain ChatGPT |
+| :--- | :---: | :---: | :---: | :---: |
+| Builds understanding | ✅ | ❌ recall only | ❌ links concepts | ⚠️ gives answers |
+| Tests comprehension | ✅ | ✅ | ❌ | ❌ |
+| Zero setup | ✅ | ⚠️ deck building | ⚠️ vault setup | ✅ |
+| Works offline (PDF) | ✅ | ✅ | ⚠️ | ❌ |
+| Forces you to think | ✅ questions lead | ❌ | ❌ | ❌ |
+| Open protocol (MIT) | ✅ | ❌ | ❌ | ❌ |
+| You own the document | ✅ | ⚠️ | ✅ | ❌ |
+
+The differentiator isn't the AI — it's the **protocol**. The prompts enforce a structure the model can't skip past: every concept must arise as a question from the previous one, every term gets one sentence, and the document ends on a Sift-style checkpoint. The AI is forced to be a teacher, not an answer machine.
+
+---
+
+## For AI agents
+
+The site exposes a **Machine Hub** with bare prompt endpoints designed for agent-to-agent handoff. No chrome, no design, no human-readable wrapper — just the raw protocol with a copy button.
+
+- [`/machine/thread`](https://beingseight.github.io/being-zetetic/machine-thread) — raw Thread prompt
+- [`/machine/sift`](https://beingseight.github.io/being-zetetic/machine-sift) — raw Sift prompt
+- [`/machine/hybrid`](https://beingseight.github.io/being-zetetic/machine-hybrid) — raw Hybrid prompt
+
+Each endpoint is a single self-contained page. `GET` the page, append a syllabus, execute.
+
+---
+
+## Driven by Mnemethos
+
+> Mnemethos is the philosophy that drives everything I build.
+> *From μνήμη (memory) and the act of building the divine in the everyday.*
+
+A full-length book on the concept — its real-world psychological impact on the person who lives by it — is releasing **September 1, 2026**. [Read the manifesto →](https://beingseight.github.io/being-zetetic/mnemethos)
+
+---
 
 ## Local development
 
 ```sh
+# any static server works
 python3 -m http.server 3000
 # → http://localhost:3000/
 ```
 
-Any static-file server works. There is no `npm install`, no transpiler.
+No `npm install`. No transpiler. No build pipeline. The site is what it is.
+
+---
 
 ## File structure
 
 ```
-.
+being-zetetic/
 ├── index.html              # Landing page
-├── thread.html             # Zetetic Thread (human)
-├── sift.html               # Zetetic Sift (human)
-├── hybrid.html             # Zetetic-Socratic Hybrid (human)
-├── mnemethos.html          # Philosophy page
-├── machine.html            # Machine Hub
-├── machine-thread.html     # Raw prompt — AI agent
-├── machine-sift.html       # Raw prompt — AI agent
-├── machine-hybrid.html     # Raw prompt — AI agent
+├── thread.html             # Zetetic Thread (human page)
+├── sift.html               # Zetetic Sift (human page)
+├── hybrid.html             # Zetetic-Socratic Hybrid (human page)
+├── mnemethos.html          # The philosophy / manifesto
+├── machine.html            # Machine Hub — raw prompt index
+├── machine-thread.html     # Raw Thread prompt for AI agents
+├── machine-sift.html       # Raw Sift prompt for AI agents
+├── machine-hybrid.html     # Raw Hybrid prompt for AI agents
 ├── 404.html                # Client-side router + 404
 ├── examples/               # Pre-generated Zetetic documents
 │   ├── index.html
@@ -57,42 +139,21 @@ Any static-file server works. There is no `npm install`, no transpiler.
 │   ├── styles.css          # Single global stylesheet
 │   ├── prompts.js          # Source of truth for the three prompts
 │   ├── app.js              # Copy buttons, active nav
-│   ├── maker.js            # Maker / footer partials
-│   ├── meta.js             # Head meta injection
 │   ├── analytics.js        # Local-first analytics (localStorage)
-│   └── og-card.png         # Open Graph social card
-├── _redirects              # Clean-URL routing (Netlify)
+│   ├── meta.js             # Head meta injection
+│   ├── og-card.png         # Open Graph social card
+│   └── favicon*.png        # Z-mark favicon pack
+├── _redirects              # Clean-URL routing (Netlify / Cloudflare)
 ├── robots.txt
+├── LICENSE                 # MIT
 └── README.md
 ```
 
 ## Editing the prompts
 
-All three mode prompts live in `assets/prompts.js` under `window.BZ_PROMPTS`. The HTML pages render them via a small `document.getElementById('...').textContent = window.BZ_PROMPTS.thread` pattern, and the `[data-copy]` buttons copy them straight from that source of truth.
+All three mode prompts live in `assets/prompts.js` under `window.BZ_PROMPTS`. The HTML pages render them via a small `document.getElementById('…').textContent = window.BZ_PROMPTS.thread` pattern, and the `[data-copy]` buttons copy them straight from that source of truth.
 
-Edit once, updates everywhere.
-
-## Deployment
-
-### Cloudflare Pages (recommended)
-
-1. Push this repo to GitHub.
-2. In Cloudflare Pages, "Create application" → "Pages" → "Connect to Git".
-3. Select the repo. Build command: *(none)*. Build output: `/`.
-4. Deploy. Cloudflare serves `/thread` from `thread.html` natively — no `_redirects` needed.
-5. Add the custom domain `https://beingseight.github.io/being-zetetic` in the Pages project.
-
-### Netlify
-
-Drop the folder on Netlify, or connect via Git. The included `_redirects` file maps the clean URLs to the `.html` files.
-
-### Vercel
-
-`vercel deploy` from the project root. Add a `vercel.json` with the same rewrites if you want clean URLs without the `.html` extension.
-
-### GitHub Pages
-
-Push to `gh-pages` branch. Note: GitHub Pages does not honor `_redirects`, so the `404.html` client-side router handles clean-URL fallback.
+Edit once → updates everywhere.
 
 ## URL map
 
@@ -110,10 +171,32 @@ Push to `gh-pages` branch. Note: GitHub Pages does not honor `_redirects`, so th
 | `/examples`           | `examples/index.html`             |
 | `/examples/<slug>`    | `examples/<slug>.html`            |
 
+The `404.html` client-side router maps clean URLs → `.html` files. Cloudflare Pages / Netlify get native support via `_redirects`.
+
+## Deployment
+
+Any static host works. No build step.
+
+- **Cloudflare Pages** *(recommended)* — connect repo, leave build command empty, output dir = `/`. Free custom domain, native clean-URL support, fastest CDN.
+- **Netlify** — drop the folder or connect Git. `_redirects` is honored automatically.
+- **GitHub Pages** — push to `main`, enable Pages, source = `/`. The `404.html` router handles clean-URL fallback.
+
+---
+
 ## License
 
 MIT. Take the protocol, fork the site, make it your own.
 
 ---
 
-Built in the open. No analytics that phone home. The protocol works because it doesn't let you fake understanding — neither does the code.
+<div align="center">
+
+**Built by [BeingSeight](https://github.com/BeingSeight)**
+&nbsp;·&nbsp; [github](https://github.com/BeingSeight)
+&nbsp;·&nbsp; [linkedin](https://www.linkedin.com/in/BeingSeight)
+&nbsp;·&nbsp; [x](https://x.com/BeingSeight)
+&nbsp;·&nbsp; [email](mailto:BeingSeight@gmail.com)
+
+*Driven by Mnemethos.*
+
+</div>
