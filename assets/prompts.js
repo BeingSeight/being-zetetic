@@ -62,6 +62,17 @@ and what will the reader be able to do after working through it?
 
 ---
 
+## 📖 Pre-Knowledge Foundation
+
+Before the first phase, ground the reader with 3–5 essential
+prerequisite concepts they need to ace this material. One to
+two pages. Each concept gets 2–3 sentences: what it is, why
+it matters for this topic, and how it connects to what follows.
+This is the "ground floor" — no reader is left behind before
+the first question is asked.
+
+---
+
 ## 🧭 Map
 
 A bulleted list showing every phase as a single line in the form
@@ -134,6 +145,7 @@ Three to five suggested next topics, each on its own line:
 8. **Code fences** (\`\`\`) are reserved for the structure skeleton and any code examples. Do not use them for prose.
 9. **Phase length:** 80–200 words. Density over volume.
 10. **The Map and Concept Index are required** — they are what makes the document skimmable in PDF form.
+11. **Every opening question must be applied** — testing a decision, trade-off, or real-world scenario, not a definition. The reader should feel they are solving a problem, not recalling a fact. Each phase must anchor its concept in a concrete choice the reader would actually face.
 
 ## Voice
 
@@ -151,24 +163,14 @@ Start with the single broadest question the syllabus implies. Do not announce. B
 
 ## Required closing
 
-After the "Further Paths" section, append this exact signature block. Do not paraphrase. Do not add or remove lines. It must be the very last thing in the document.
+After the "Further Paths" section, append this closing block. Write a 2–3 line personal note specific to this topic and syllabus — human in tone, reflecting on the discipline of learning this subject through active questioning. Then append the exact signature block below.
 
 \`\`\`markdown
 ---
 
-> *A personal note to whoever is reading this:*
->
-> You chose to learn something the slow way — by being asked, not by being told. Most people don't. That choice is the only thing that compounds. The syllabus will fade. The model will be retrained. The links below might move. But the discipline you just practiced — staying with a question until you can rebuild its answer from a single seed — that discipline is yours. It transfers. Use it again.
->
-> If this document helped you, send the protocol to one person who would actually use it. That's how Mnemethos works — one mind at a time.
->
-> Welcome to the long road. Stay curious. — BeingSeight
+> *<Write 2–3 lines here. Specific to this topic. Human in tone. Reflects on learning this subject through questions — not answers.>*
 
-**Made by BeingSeight** · Driven by Mnemethos
-GitHub · [github.com/BeingSeight](https://github.com/BeingSeight)
-X · [@BeingSeight](https://x.com/BeingSeight)
-LinkedIn · [BeingSeight](https://www.linkedin.com/in/BeingSeight)
-Email · [BeingSeight@gmail.com](mailto:BeingSeight@gmail.com)
+**Made by BeingSeight** · Driven by Mnemethos · [GitHub](https://github.com/BeingSeight) · [X](https://x.com/BeingSeight) · [Email](mailto:BeingSeight@gmail.com)
 
 *MIT License — fork it, print it, teach with it.*
 \`\`\`
@@ -185,7 +187,7 @@ Each block is a **4-option multiple-choice question** followed by:
 - **Why each wrong answer is wrong** (1 line each)
 - **TETHER** (1 line): a bridge to the next question, explaining why this matters for what's coming
 
-Every wrong answer must be **plausible to a hasty reader**. A question is only good if someone scanning could confidently pick the wrong one for a confident-sounding reason.
+Every wrong answer must test a **specific, plausible misconception** — not be obviously wrong. A question is only good if someone who skimmed the material would confidently pick the wrong one for a confident-sounding reason. Every question must be **applied/situational** — testing a decision, trade-off, or scenario, never a definitional recall.
 
 To *sift* is to separate the fine from the coarse. The mode separates what you know from what you merely recognize.
 
@@ -220,6 +222,17 @@ Two sentences. Read the question. **Cover the explanation** with
 your hand. Choose an answer. Then uncover. If you were wrong,
 the why-line tells you *which assumption broke* — fix that
 assumption before moving on.
+
+---
+
+## 📖 Pre-Knowledge Foundation
+
+Before the first question, ground the reader with 3–5 essential
+prerequisite concepts they need to ace this material. One to
+two pages. Each concept gets 2–3 sentences: what it is, why
+it matters for this topic, and how it connects to what follows.
+This is the "ground floor" — no reader is left behind before
+the first question is tested.
 
 ---
 
@@ -314,6 +327,7 @@ should be able to answer from memory after one careful pass.
 9. **Questions per phase:** exactly 2.
 10. **Wrong-answer explanations** are exactly one sentence. No exceptions.
 11. **The Map and Concept Index are required** — they are what makes the document skimmable in PDF form.
+12. **Every question must be applied/situational** — testing a decision, trade-off, or real-world scenario, not a definition. Wrong answers must test specific plausible misconceptions, not be trivially incorrect. A good question is one where a careful reader might genuinely hesitate.
 
 ## Voice
 
@@ -331,24 +345,14 @@ Start with the YAML frontmatter on line 1. Do not announce. Begin.
 
 ## Required closing
 
-After the "Final Checkpoint" section, append this exact signature block. Do not paraphrase. Do not add or remove lines. It must be the very last thing in the document.
+After the "Final Checkpoint" section, append this closing block. Write a 2–3 line personal note specific to this topic and syllabus — human in tone, reflecting on the discipline of learning this subject through active questioning. Then append the exact signature block below.
 
 \`\`\`markdown
 ---
 
-> *A personal note to whoever is reading this:*
->
-> You chose to learn something the slow way — by being asked, not by being told. Most people don't. That choice is the only thing that compounds. The syllabus will fade. The model will be retrained. The links below might move. But the discipline you just practiced — staying with a question until you can rebuild its answer from a single seed — that discipline is yours. It transfers. Use it again.
->
-> If this document helped you, send the protocol to one person who would actually use it. That's how Mnemethos works — one mind at a time.
->
-> Welcome to the long road. Stay curious. — BeingSeight
+> *<Write 2–3 lines here. Specific to this topic. Human in tone. Reflects on learning this subject through questions — not answers.>*
 
-**Made by BeingSeight** · Driven by Mnemethos
-GitHub · [github.com/BeingSeight](https://github.com/BeingSeight)
-X · [@BeingSeight](https://x.com/BeingSeight)
-LinkedIn · [BeingSeight](https://www.linkedin.com/in/BeingSeight)
-Email · [BeingSeight@gmail.com](mailto:BeingSeight@gmail.com)
+**Made by BeingSeight** · Driven by Mnemethos · [GitHub](https://github.com/BeingSeight) · [X](https://x.com/BeingSeight) · [Email](mailto:BeingSeight@gmail.com)
 
 *MIT License — fork it, print it, teach with it.*
 \`\`\`
@@ -404,6 +408,17 @@ the answer, then the next question. Don't skip the elaboration.
 For each SIFT block: cover the options, choose, then read the
 whys. If you were wrong, fix the broken assumption before
 moving on.
+
+---
+
+## 📖 Pre-Knowledge Foundation
+
+Before the first phase, ground the reader with 3–5 essential
+prerequisite concepts they need to ace this material. One to
+two pages. Each concept gets 2–3 sentences: what it is, why
+it matters for this topic, and how it connects to what follows.
+This is the "ground floor" — no reader is left behind before
+the first question is asked.
 
 ---
 
@@ -537,6 +552,7 @@ should be able to answer from memory after one careful pass.
 9. **Wrong-answer explanations** are exactly one sentence. No exceptions.
 10. **The Map and Concept Index are required** — they make the document skimmable in PDF form.
 11. **End the cycle on a SIFT phase**, so the final checkpoint tests the whole arc.
+12. **Every question (Thread and Sift) must be applied** — testing a decision, trade-off, or real-world scenario, never a definition. In Thread phases, the opening question must anchor the concept in a concrete choice the reader would face. In Sift phases, wrong answers must test specific plausible misconceptions.
 
 ## Voice
 
@@ -554,24 +570,14 @@ Start with the YAML frontmatter on line 1. Do not announce. Begin with a THREAD 
 
 ## Required closing
 
-After the "Final Checkpoint" section, append this exact signature block. Do not paraphrase. Do not add or remove lines. It must be the very last thing in the document.
+After the "Final Checkpoint" section, append this closing block. Write a 2–3 line personal note specific to this topic and syllabus — human in tone, reflecting on the discipline of learning this subject through active questioning. Then append the exact signature block below.
 
 \`\`\`markdown
 ---
 
-> *A personal note to whoever is reading this:*
->
-> You chose to learn something the slow way — by being asked, not by being told. Most people don't. That choice is the only thing that compounds. The syllabus will fade. The model will be retrained. The links below might move. But the discipline you just practiced — staying with a question until you can rebuild its answer from a single seed — that discipline is yours. It transfers. Use it again.
->
-> If this document helped you, send the protocol to one person who would actually use it. That's how Mnemethos works — one mind at a time.
->
-> Welcome to the long road. Stay curious. — BeingSeight
+> *<Write 2–3 lines here. Specific to this topic. Human in tone. Reflects on learning this subject through questions — not answers.>*
 
-**Made by BeingSeight** · Driven by Mnemethos
-GitHub · [github.com/BeingSeight](https://github.com/BeingSeight)
-X · [@BeingSeight](https://x.com/BeingSeight)
-LinkedIn · [BeingSeight](https://www.linkedin.com/in/BeingSeight)
-Email · [BeingSeight@gmail.com](mailto:BeingSeight@gmail.com)
+**Made by BeingSeight** · Driven by Mnemethos · [GitHub](https://github.com/BeingSeight) · [X](https://x.com/BeingSeight) · [Email](mailto:BeingSeight@gmail.com)
 
 *MIT License — fork it, print it, teach with it.*
 \`\`\`
