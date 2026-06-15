@@ -1,3 +1,44 @@
+# OS files
 .DS_Store
-node_modules/
+._.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.orig
+*.bak
+.vim/
+*.sublime-workspace
+
+# Environment
+.env
+.env.*
+.envrc
+
+# Logs
 *.log
+npm-debug.log*
+
+# Node
+node_modules/
+
+# Cache
+.cache/
+.sass-cache/
+
+# Python (transient)
+__pycache__/
+*.pyc
+
+# Temp
+*.tmp
