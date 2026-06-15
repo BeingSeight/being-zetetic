@@ -66,6 +66,9 @@
   // ── Active nav link ──
   const here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   document.querySelectorAll('nav.top a[data-path]').forEach(function (a) {
-    if (a.getAttribute('data-path').toLowerCase() === here) a.classList.add('active');
+    const p = a.getAttribute('data-path').toLowerCase();
+    if (p === here) a.classList.add('active');
+    // highlight the machine hub when on a /machine-* page
+    else if (p === 'machine.html' && /^machine-/.test(here)) a.classList.add('active');
   });
 })();
