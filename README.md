@@ -104,92 +104,15 @@ A full-length book on the concept — its real-world psychological impact on the
 
 ---
 
-## Local development
-
-```sh
-# any static server works
-python3 -m http.server 3000
-# → http://localhost:3000/
-```
-
-No `npm install`. No transpiler. No build pipeline. The site is what it is.
-
----
-
-## File structure
-
-```
-being-zetetic/
-├── index.html              # Landing page
-├── thread.html             # Zetetic Thread (human page)
-├── sift.html               # Zetetic Sift (human page)
-├── hybrid.html             # Zetetic-Socratic Hybrid (human page)
-├── mnemethos.html          # The philosophy / manifesto
-├── machine.html            # Machine Hub — raw prompt index
-├── machine-thread.html     # Raw Thread prompt for AI agents
-├── machine-sift.html       # Raw Sift prompt for AI agents
-├── machine-hybrid.html     # Raw Hybrid prompt for AI agents
-├── 404.html                # Client-side router + 404
-├── examples/               # Pre-generated Zetetic documents
-│   ├── index.html
-│   ├── operating-systems.html
-│   ├── javascript-closures.html
-│   └── blockchain-basics.html
-├── assets/
-│   ├── styles.css          # Single global stylesheet
-│   ├── prompts.js          # Source of truth for the three prompts
-│   ├── app.js              # Copy buttons, active nav
-│   ├── analytics.js        # Local-first analytics (localStorage)
-│   ├── meta.js             # Head meta injection
-│   ├── og-card.png         # Open Graph social card
-│   └── favicon*.png        # Z-mark favicon pack
-├── _redirects              # Clean-URL routing (Netlify / Cloudflare)
-├── robots.txt
-├── LICENSE                 # MIT
-└── README.md
-```
-
-## Editing the prompts
-
-All three mode prompts live in `assets/prompts.js` under `window.BZ_PROMPTS`. The HTML pages render them via a small `document.getElementById('…').textContent = window.BZ_PROMPTS.thread` pattern, and the `[data-copy]` buttons copy them straight from that source of truth.
-
-Edit once → updates everywhere.
-
-## URL map
-
-| Clean URL             | File                              |
-| --------------------- | --------------------------------- |
-| `/`                   | `index.html`                      |
-| `/thread`             | `thread.html`                     |
-| `/sift`               | `sift.html`                       |
-| `/hybrid`             | `hybrid.html`                     |
-| `/mnemethos`          | `mnemethos.html`                  |
-| `/machine`            | `machine.html`                    |
-| `/machine/thread`     | `machine-thread.html`             |
-| `/machine/sift`       | `machine-sift.html`               |
-| `/machine/hybrid`     | `machine-hybrid.html`             |
-| `/examples`           | `examples/index.html`             |
-| `/examples/<slug>`    | `examples/<slug>.html`            |
-
-The `404.html` client-side router maps clean URLs → `.html` files. Cloudflare Pages / Netlify get native support via `_redirects`.
-
-## Deployment
-
-Any static host works. No build step.
-
-- **Cloudflare Pages** *(recommended)* — connect repo, leave build command empty, output dir = `/`. Free custom domain, native clean-URL support, fastest CDN.
-- **Netlify** — drop the folder or connect Git. `_redirects` is honored automatically.
-- **GitHub Pages** — push to `main`, enable Pages, source = `/`. The `404.html` router handles clean-URL fallback.
-
----
-
 ## License
 
-MIT. Take the protocol, fork the site, make it your own.
+MIT. Take the protocol, fork the site, make it your own. [View license →](https://github.com/BeingSeight/being-zetetic/blob/main/LICENSE)
 
 ---
 
 <div align="center">
+
+### ⭐ If Being Zetetic helped you learn something real, star the repo — it helps the next person find it.
 
 **Built by [BeingSeight](https://github.com/BeingSeight)**
 &nbsp;·&nbsp; [github](https://github.com/BeingSeight)
