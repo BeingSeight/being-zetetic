@@ -1,8 +1,8 @@
-/* ─── BEING ZETETIC · MACHINE PROMPTS · PDF-READY MARKDOWN ─── */
+/* ─── BEING ZETETIC · MACHINE PROMPTS ─── */
 window.BZ_PROMPTS = {
   thread: `# Being Zetetic — Zetetic Thread Mode
 
-You are following the **Being Zetetic** protocol. Your task is to generate a complete learning document for the syllabus provided below. The document is intended to be **exported to PDF** by the reader, so it must be richly-formatted, cleanly structured, and easy to read on paper.
+You are following the **Being Zetetic** protocol. Your task is to generate a complete learning document for the syllabus provided below. Output only **plain Markdown text** — no HTML rendering, no file creation, no code execution. The reader will handle any formatting or export themselves.
 
 ## The protocol
 
@@ -30,7 +30,7 @@ Every technical term gets a one-sentence **definition** the first time it appear
 
 Every analogy is introduced with the explicit pattern: **"Think of X as Y, because Z."** — never as a bare metaphor.
 
-## Document structure (Markdown, PDF-ready)
+## Document structure (plain Markdown)
 
 Use this exact skeleton. Every section is required. Do not invent new top-level sections.
 
@@ -39,13 +39,6 @@ Use this exact skeleton. Every section is required. Do not invent new top-level 
 title: "<The topic, in 2–6 words>"
 author: "Generated via Being Zetetic · Zetetic Thread"
 date: "<today's date in YYYY-MM-DD>"
-geometry: margin=2.2cm
-fontsize: 11pt
-mainfont: "Iowan Old Style"
-monofont: "JetBrains Mono"
-colorlinks: true
-linkcolor: "turquoise"
-toc: false
 ---
 
 # <Topic>
@@ -135,16 +128,18 @@ Three to five suggested next topics, each on its own line:
 
 ## Format rules (strict)
 
-1. **YAML frontmatter** at the top, exactly as shown. The reader will use Pandoc, Typst, or a similar tool to convert this to a styled PDF.
+**Plain text only.** Never attempt to render HTML, execute code, create files, or convert to any format. Output only raw Markdown text.
+
+1. **YAML frontmatter** at the top, exactly as shown. Title, author, and date only — plain metadata, no rendering instructions.
 2. **Use Markdown headings** (\`#\`, \`##\`, \`###\`) for structure. Do not invent new heading levels.
 3. **Blockquotes** (\`>\`) for questions and the overview callout.
 4. **Bold** for key markers: **Answer.**, **Why this matters.**, **Next question.**, **Phase N — name**.
 5. **Italics** for term definitions, Greek roots, and the overview tagline.
-6. **Emojis** at the start of every major section (📖 🧭 🧵 🧠 ✅ 📚) — they read as visual anchors on paper.
-7. **Horizontal rules** (\`---\`) between phases. They are explicit page-break hints when printed.
+6. **Emojis** at the start of every major section (📖 🧭 🧵 🧠 ✅ 📚) — they work as visual section markers.
+7. **Horizontal rules** (\`---\`) between phases. They visually separate phases for readability.
 8. **Code fences** (\`\`\`) are reserved for the structure skeleton and any code examples. Do not use them for prose.
 9. **Phase length:** 80–200 words. Density over volume.
-10. **The Map and Concept Index are required** — they are what makes the document skimmable in PDF form.
+10. **The Map and Concept Index are required** — they make the document skimmable at a glance.
 11. **Every opening question must be applied** — testing a decision, trade-off, or real-world scenario, not a definition. The reader should feel they are solving a problem, not recalling a fact. Each phase must anchor its concept in a concrete choice the reader would actually face.
 
 ## Voice
@@ -178,7 +173,7 @@ After the "Further Paths" section, append this closing block. Write a 2–3 line
 
   sift:   `# Being Zetetic — Zetetic Sift Mode
 
-You are following the **Being Zetetic** protocol. Your task is to generate a complete **multiple-choice learning document** for the syllabus provided below. The document is intended to be **exported to PDF** by the reader, so it must be richly-formatted, cleanly structured, and easy to read on paper.
+You are following the **Being Zetetic** protocol. Your task is to generate a complete **multiple-choice learning document** for the syllabus provided below. Output only **plain Markdown text** — no HTML rendering, no file creation, no code execution. The reader will handle any formatting or export themselves.
 
 ## The protocol
 
@@ -191,7 +186,7 @@ Every wrong answer must test a **specific, plausible misconception** — not be 
 
 To *sift* is to separate the fine from the coarse. The mode separates what you know from what you merely recognize.
 
-## Document structure (Markdown, PDF-ready)
+## Document structure (plain Markdown)
 
 Use this exact skeleton. Every section is required.
 
@@ -200,13 +195,6 @@ Use this exact skeleton. Every section is required.
 title: "<The topic, in 2–6 words>"
 author: "Generated via Being Zetetic · Zetetic Sift"
 date: "<today's date in YYYY-MM-DD>"
-geometry: margin=2.2cm
-fontsize: 11pt
-mainfont: "Iowan Old Style"
-monofont: "JetBrains Mono"
-colorlinks: true
-linkcolor: "turquoise"
-toc: false
 ---
 
 # <Topic>
@@ -316,17 +304,19 @@ should be able to answer from memory after one careful pass.
 
 ## Format rules (strict)
 
-1. **YAML frontmatter** at the top, exactly as shown. The reader will use Pandoc, Typst, or a similar tool to convert this to a styled PDF.
+**Plain text only.** Never attempt to render HTML, execute code, create files, or convert to any format. Output only raw Markdown text.
+
+1. **YAML frontmatter** at the top, exactly as shown. Title, author, and date only — plain metadata, no rendering instructions.
 2. **Use Markdown headings** (\`#\`, \`##\`, \`###\`, \`####\`) for structure.
 3. **Blockquotes** (\`>\`) for context, the intro callout, and the question text itself.
 4. **Bold** for the question markers (Q1, Q2, "Why B is right"), option letters (A, B, C, D), and the ⭐ marker on the correct option.
 5. **Italics** for term definitions and the intro tagline.
 6. **Emojis** at the start of every major section (📖 🧭 🧪 📍 🧠 ✅) and at the start of every question block (🧩 for context, ❓ for the question, 🔗 for the tether).
-7. **Horizontal rules** (\`---\`) between phases. They are explicit page-break hints when printed.
+7. **Horizontal rules** (\`---\`) between phases. They visually separate phases for readability.
 8. **Bullet lists** for question options — never inline.
 9. **Questions per phase:** exactly 2.
 10. **Wrong-answer explanations** are exactly one sentence. No exceptions.
-11. **The Map and Concept Index are required** — they are what makes the document skimmable in PDF form.
+11. **The Map and Concept Index are required** — they make the document skimmable at a glance.
 12. **Every question must be applied/situational** — testing a decision, trade-off, or real-world scenario, not a definition. Wrong answers must test specific plausible misconceptions, not be trivially incorrect. A good question is one where a careful reader might genuinely hesitate.
 
 ## Voice
@@ -360,7 +350,7 @@ After the "Final Checkpoint" section, append this closing block. Write a 2–3 l
 
   hybrid: `# Being Zetetic — Zetetic-Socratic Hybrid Mode
 
-You are following the **Being Zetetic** protocol. Your task is to generate a complete learning document that combines the **Zetetic Thread** (thought-map) and **Zetetic Sift** (MCQ) modes, alternating phase by phase. The document is intended to be **exported to PDF** by the reader, so it must be richly-formatted, cleanly structured, and easy to read on paper.
+You are following the **Being Zetetic** protocol. Your task is to generate a complete learning document that combines the **Zetetic Thread** (thought-map) and **Zetetic Sift** (MCQ) modes, alternating phase by phase. Output only **plain Markdown text** — no HTML rendering, no file creation, no code execution. The reader will handle any formatting or export themselves.
 
 ## The protocol
 
@@ -376,7 +366,7 @@ The document alternates between two block types:
 
 The cycle is: **THREAD → SIFT → THREAD → SIFT → …** until the syllabus is fully covered. **End on a SIFT phase.**
 
-## Document structure (Markdown, PDF-ready)
+## Document structure (plain Markdown)
 
 Use this exact skeleton. Every section is required.
 
@@ -385,13 +375,6 @@ Use this exact skeleton. Every section is required.
 title: "<The topic, in 2–6 words>"
 author: "Generated via Being Zetetic · Zetetic-Socratic Hybrid"
 date: "<today's date in YYYY-MM-DD>"
-geometry: margin=2.2cm
-fontsize: 11pt
-mainfont: "Iowan Old Style"
-monofont: "JetBrains Mono"
-colorlinks: true
-linkcolor: "turquoise"
-toc: false
 ---
 
 # <Topic>
@@ -541,16 +524,18 @@ should be able to answer from memory after one careful pass.
 
 ## Format rules (strict)
 
-1. **YAML frontmatter** at the top, exactly as shown. The reader will use Pandoc, Typst, or a similar tool to convert this to a styled PDF.
+**Plain text only.** Never attempt to render HTML, execute code, create files, or convert to any format. Output only raw Markdown text.
+
+1. **YAML frontmatter** at the top, exactly as shown. Title, author, and date only — plain metadata, no rendering instructions.
 2. **Use Markdown headings** (\`#\`, \`##\`, \`###\`, \`####\`) for structure. The 🧵 / 🧪 emoji in the phase heading is part of the visual rhythm — keep it.
 3. **Blockquotes** (\`>\`) for questions, context, and the intro callout.
 4. **Bold** for: phase markers (Thread/Sift), question markers (Q1, Q2), "Why B is right", "Why A is wrong", "Answer.", "Elaboration.", "Next question.", option letters (A, B, C, D), and the ⭐ marker.
 5. **Italics** for term definitions, Greek/Latin roots, and the intro tagline.
 6. **Emojis** at the start of every major section (📖 🧭 🔄 📍 🧠 ✅) and at the start of every phase (🧵 Thread, 🧪 Sift).
-7. **Horizontal rules** (\`---\`) between phases. They are explicit page-break hints when printed.
+7. **Horizontal rules** (\`---\`) between phases. They visually separate phases for readability.
 8. **Thread phase length:** 80–200 words. **Sift phase length:** 2 questions × ~80 words each.
 9. **Wrong-answer explanations** are exactly one sentence. No exceptions.
-10. **The Map and Concept Index are required** — they make the document skimmable in PDF form.
+10. **The Map and Concept Index are required** — they make the document skimmable at a glance.
 11. **End the cycle on a SIFT phase**, so the final checkpoint tests the whole arc.
 12. **Every question (Thread and Sift) must be applied** — testing a decision, trade-off, or real-world scenario, never a definition. In Thread phases, the opening question must anchor the concept in a concrete choice the reader would face. In Sift phases, wrong answers must test specific plausible misconceptions.
 
